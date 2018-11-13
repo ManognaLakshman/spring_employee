@@ -17,6 +17,10 @@ import org.hibernate.annotations.GenericGenerator;
 //
 //@Document(indexName="employees")
 //
+//enum country{
+//	INDIA,USA,UK,JAPAN,PAKISTAN,KAZAKISTAN,AFGHANISTAN,KENYA,UGANDA,NAIROBI,SIRIYA,IRAQ,IRAN,NIGERIA,CZECHREPUBLIC,BRAZIL,MOROCCO,TURKEY,BANGLADESH,WAKANDA,MALDIVES,MALASIA,ASGUARD,AMAZON,ATLANTIS,KNOWWHERE,TITAN,KRYPTON
+//}
+
 @Entity
 public class Employee {
 	//@Id
@@ -40,9 +44,44 @@ public class Employee {
 	private String dept;
 	private String skill;
 	
+	private float salary;
+	private int grade;
+	
+	private String city,country;
+	
+	
+	
+	public int getGrade() {
+		return grade;
+	}
+	public void setGrade(int grade) {
+		this.grade = grade;
+	}
+	public String getCity() {
+		return city;
+	}
+	public void setCity(String city) {
+		this.city = city;
+	}
+	public String getCountry() {
+		return country;
+	}
+	public void setCountry(String country) {
+		this.country = country;
+	}
+	public float getSalary() {
+		return salary;
+	}
+	public void setSalary(float salary) {
+		this.salary = salary;
+	}
+	
+	
 	@Temporal(TemporalType.DATE)
 	private Date dOJ;
 	private String designation;
+	
+	
 	public int getEmpid() {
 		return empid;
 	}

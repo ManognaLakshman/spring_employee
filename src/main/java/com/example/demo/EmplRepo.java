@@ -35,11 +35,29 @@ public interface EmplRepo extends JpaRepository<Employee, Integer> {
 	
 //	@RestResource(path = "bydoj", rel = "bydoj")
 //    List<Employee> findAllBydOJ(@Param("doj") Date dOJ);
+	
+	@RestResource(path = "bysalary", rel = "bysalary")
+    Page<Employee> findAllBysalary(@Param("salary") float salary,Pageable pageable);
+//	//
+	
+	
+	@RestResource(path = "bygrade", rel = "bygrade")
+    Page<Employee> findAllBygrade(@Param("grade") int grade,Pageable pageable);
+	
+	
+	@RestResource(path = "bycity", rel = "bycity")
+    Page<Employee> findAllBycity(@Param("city") String city,Pageable pageable);
+	
+	
+	@RestResource(path = "bycountry", rel = "bycountry")
+    Page<Employee> findAllBycountry(@Param("country") String country,Pageable pageable);
 //	//
 	//testing delete by
 	@Transactional
 	@RestResource(path = "deletebyempname", rel = "deletebyempname")
     List<Employee> deleteByempname(@Param("name") String empname);//remove StartingWith
+	
+	
 	
 //	
 }
