@@ -50,17 +50,17 @@
             <version>16.0.0.400</version>
         </dependency>-->
         
-	<!-- uncomment 	<dependency>
+	<!-- uncomment--> 	<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
-		</dependency>-->
+		</dependency>
 		
-		<dependency>
+		<!-- <dependency>
     <groupId>org.postgresql</groupId>
     <artifactId>postgresql</artifactId>
-    <version>9.4-1201-jdbc4</version><!--$NO-MVN-MAN-VER$-->
-</dependency>
+    <version>9.4-1201-jdbc4</version>
+</dependency> -->
 		
 		
 		<!-- comment the postgres sql dependency after pushing to heroku -->

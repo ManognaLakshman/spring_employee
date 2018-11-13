@@ -4,6 +4,7 @@ import java.util.Date;
 
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -42,16 +43,19 @@ public class Employee {
 	
 	private int empid;
 	
+	private String department;
+	
 	private String empname;
 	//dept mapping here
-	@ManyToOne
-    @JoinColumn(name="dept")
+//	@ManyToOne(fetch=FetchType.LAZY)
 //	private Department department;
 	
 	
 	private String dept;
 	
 	private String skill;
+	
+	
 	
 	private float salary;
 	private int grade;
@@ -115,6 +119,12 @@ public class Employee {
 	public String getSkill() {
 		return skill;
 	}
+//	public Department getDepartment() {
+//		return department;
+//	}
+//	public void setDepartment(Department department) {
+//		this.department = department;
+//	}
 	public void setSkill(String skill) {
 		this.skill = skill;
 	}
@@ -132,7 +142,7 @@ public class Employee {
 	}
 	@Override
 	public String toString() {
-		return "Employee [empid=" + empid + ", empname=" + empname + ", dept=" + dept + ", skill=" + skill + ", DOJ="
+		return "Employee [empid=" + empid + ", empname=" + empname + ", dept=" +dept+ ", skill=" + skill + ", DOJ="
 				+ dOJ + ", designation=" + designation + "]";
 	}
 	
