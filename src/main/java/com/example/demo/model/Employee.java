@@ -7,6 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -41,13 +43,26 @@ public class Employee {
 	private int empid;
 	
 	private String empname;
+	//dept mapping here
+	@ManyToOne
+    @JoinColumn(name="dept")
+//	private Department department;
+	
+	
 	private String dept;
+	
 	private String skill;
 	
 	private float salary;
 	private int grade;
 	
 	private String city,country;
+	
+	@Temporal(TemporalType.DATE)
+	private Date dOJ;
+	private String designation;
+	
+	
 	
 	
 	
@@ -77,9 +92,6 @@ public class Employee {
 	}
 	
 	
-	@Temporal(TemporalType.DATE)
-	private Date dOJ;
-	private String designation;
 	
 	
 	public int getEmpid() {

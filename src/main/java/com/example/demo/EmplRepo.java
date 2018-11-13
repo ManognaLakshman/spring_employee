@@ -1,6 +1,7 @@
 package com.example.demo;
 
 import java.util.Date;
+
 import java.util.List;
 
 import org.springframework.data.domain.Page;
@@ -32,9 +33,10 @@ public interface EmplRepo extends JpaRepository<Employee, Integer> {
 	
 	@RestResource(path = "bydoj", rel = "bydoj")
     Page<Employee> findAllBydOJ(@Param("doj") Date dOJ,Pageable pageable);
+//	List<Employee> findAllByOrderBydojAsc();
+//	List<Employee> findAllByOrderBydojDesc();
 	
-//	@RestResource(path = "bydoj", rel = "bydoj")
-//    List<Employee> findAllBydOJ(@Param("doj") Date dOJ);
+	
 	
 	@RestResource(path = "bysalary", rel = "bysalary")
     Page<Employee> findAllBysalary(@Param("salary") float salary,Pageable pageable);
@@ -51,7 +53,14 @@ public interface EmplRepo extends JpaRepository<Employee, Integer> {
 	
 	@RestResource(path = "bycountry", rel = "bycountry")
     Page<Employee> findAllBycountry(@Param("country") String country,Pageable pageable);
-//	//
+
+	
+	
+	
+	
+	//	//
+	
+	
 	//testing delete by
 	@Transactional
 	@RestResource(path = "deletebyempname", rel = "deletebyempname")
