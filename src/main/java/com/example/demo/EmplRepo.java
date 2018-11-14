@@ -12,6 +12,7 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.data.rest.core.annotation.RestResource;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.example.demo.model.Department;
 import com.example.demo.model.Employee;
 @RepositoryRestResource(collectionResourceRel="employees",path="employees")
 public interface EmplRepo extends JpaRepository<Employee, Integer> {
@@ -25,8 +26,10 @@ public interface EmplRepo extends JpaRepository<Employee, Integer> {
 	@RestResource(path = "byskill", rel = "byskill")
     Page<Employee> findByskillContaining(@Param("skill") String skill,Pageable pageable);
 	
-	@RestResource(path = "bydept", rel = "bydept")
-	Page<Employee> findAllBydept(@Param("dept") String dept,Pageable pageable);
+//	@RestResource(path = "bydept", rel = "bydept")
+//	Page<Employee> findAllBydept(@Param("dept") String dept,Pageable pageable);
+	@RestResource(path = "bydepartment", rel = "bydepartment")
+	Page<Employee> findBydepartment(@Param("department") String department,Pageable pageable);//findAllBydeptDeptname 
 	
 	@RestResource(path = "bydesignation", rel = "bydesignation")
     Page<Employee> findAllBydesignation(@Param("designation") String desigation,Pageable pageable);

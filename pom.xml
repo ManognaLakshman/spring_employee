@@ -34,11 +34,11 @@
 			<artifactId>spring-boot-starter-data-rest</artifactId>
 		</dependency>
 
-		  <dependency>
+		  <!-- <dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
 			<scope>runtime</scope>
-		</dependency>
+		</dependency> -->
 		<dependency>
 			<groupId>org.elasticsearch.client</groupId>
 			<artifactId>elasticsearch-rest-client-sniffer</artifactId>
@@ -50,17 +50,17 @@
             <version>16.0.0.400</version>
         </dependency>-->
         
-	<!-- uncomment--> 	<dependency>
+	 	<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
 		
-		<!-- <dependency>
+		<!-- --> <dependency>
     <groupId>org.postgresql</groupId>
     <artifactId>postgresql</artifactId>
     <version>9.4-1201-jdbc4</version>
-</dependency> -->
+</dependency> 
 		
 		
 		<!-- comment the postgres sql dependency after pushing to heroku -->

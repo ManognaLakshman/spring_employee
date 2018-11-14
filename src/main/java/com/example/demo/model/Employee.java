@@ -2,7 +2,7 @@ package com.example.demo.model;
 
 import java.util.Date;
 
-
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -11,6 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -25,6 +26,7 @@ import org.hibernate.annotations.GenericGenerator;
 //}
 
 @Entity
+//@Table(name="employee")
 public class Employee {
 	//@Id
 	//@GeneratedValue
@@ -40,48 +42,73 @@ public class Employee {
     //generator = "idseq")
 	//@SequenceGenerator(name = "idseq", 
     //sequenceName = "id_seq")
-	
-	private int empid;
-	
-	private String department;
-	
+	private int empid;	
 	private String empname;
-	//dept mapping here
-//	@ManyToOne(fetch=FetchType.LAZY)
-//	private Department department;
+
 	
+//	@ManyToOne(fetch = FetchType.EAGER)
 	
-	private String dept;
+	//
+	@ManyToOne
+//	@JoinColumn(name="departmentId")
+	//
+	private Department department;
+//	private String dept1;
+	
 	
 	private String skill;
-	
-	
-	
 	private float salary;
 	private int grade;
-	
-	private String city,country;
-	
+	private String city;
+	private String country;
 	@Temporal(TemporalType.DATE)
 	private Date dOJ;
-	private String designation;
+	private String designation;//total 10 attributes
 	
 	
+	//////uncomment
+	public Department getDepartment() {
+		return department;
+	}
+	public void setDepartment(Department department) {
+		this.department= department;
+	}
+	
+	///////
+//	public String getDept1() {
+//		return dept1;
+//	}
+//	public void setDept1(String dept1) {
+//		this.dept1 = dept1;
+//	}
+	
+///////experiment
+//	public String getDeptdeptname() {
+//		return dept.getDeptname();
+//	}
+//	public void setDeptdeptname(Department deptdeptname) {
+//		this.dept = deptdeptname;
+//	}
 	
 	
+	////////
+	////////
 	
 	public int getGrade() {
 		return grade;
 	}
+	
 	public void setGrade(int grade) {
 		this.grade = grade;
 	}
+	
 	public String getCity() {
 		return city;
 	}
 	public void setCity(String city) {
 		this.city = city;
 	}
+	
 	public String getCountry() {
 		return country;
 	}
@@ -96,8 +123,6 @@ public class Employee {
 	}
 	
 	
-	
-	
 	public int getEmpid() {
 		return empid;
 	}
@@ -110,21 +135,11 @@ public class Employee {
 	public void setEmpname(String empname) {
 		this.empname = empname;
 	}
-	public String getDept() {
-		return dept;
-	}
-	public void setDept(String dept) {
-		this.dept = dept;
-	}
+	
 	public String getSkill() {
 		return skill;
 	}
-//	public Department getDepartment() {
-//		return department;
-//	}
-//	public void setDepartment(Department department) {
-//		this.department = department;
-//	}
+
 	public void setSkill(String skill) {
 		this.skill = skill;
 	}
@@ -140,9 +155,10 @@ public class Employee {
 	public void setDesignation(String designation) {
 		this.designation = designation;
 	}
+	
 	@Override
 	public String toString() {
-		return "Employee [empid=" + empid + ", empname=" + empname + ", dept=" +dept+ ", skill=" + skill + ", DOJ="
+		return "Employee [empid=" + empid + ", empname=" + empname + ", dept=" +department+ ", skill=" + skill + ", DOJ="
 				+ dOJ + ", designation=" + designation + "]";
 	}
 	
