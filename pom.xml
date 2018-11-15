@@ -42,11 +42,11 @@
 		
 		<!-- ////////////////////////////////////////////////////////////////////////////////////// -->	
 
-		  <!-- --><dependency>
+		  <!-- <dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
 			<scope>runtime</scope>
-		</dependency> 
+		</dependency> -->
 		
 		<!--<dependency>
             <groupId>com.oracle</groupId>
@@ -60,11 +60,11 @@
 			<scope>test</scope>
 		</dependency>
 		
-		<!--  <dependency>
+		<!--  --><dependency>
     <groupId>org.postgresql</groupId>
     <artifactId>postgresql</artifactId>
     <version>9.4-1201-jdbc4</version>
-</dependency> --> 
+</dependency>  
 		<!-- comment the postgres sql dependency after pushing to heroku -->
 	<!-- ////////////////////////////////////////////////////////////////////////////////////// -->	
 		

@@ -28,6 +28,9 @@ public interface EmplRepo extends JpaRepository<Employee, Integer> {
 	//
 //	Page<Employee> findAll(Pageable pageable);
 //	
+	@RestResource(path = "byempid", rel = "byempid")
+    Page<Employee> findAllByempid(@Param("empid") String empid,Pageable pageable);
+	
 	@RestResource(path = "byempname", rel = "byempame")
     Page<Employee> findAllByempnameContaining(@Param("empname") String empname,Pageable pageable);//remove StartingWith
 	
@@ -36,8 +39,8 @@ public interface EmplRepo extends JpaRepository<Employee, Integer> {
 	
 //	@RestResource(path = "bydept", rel = "bydept")
 //	Page<Employee> findAllBydept(@Param("dept") String dept,Pageable pageable);
-	@RestResource(path = "bydepartment", rel = "bydepartment")
-	Page<Employee> findBydepartment(@Param("department") String department,Pageable pageable);//findAllBydeptDeptname 
+	@RestResource(path = "bydeptid", rel = "bydeptid")
+	Page<Employee> findBydeptid(@Param("deptid") String deptid,Pageable pageable);//findAllBydeptDeptname 
 	
 	@RestResource(path = "bydesignation", rel = "bydesignation")
     Page<Employee> findAllBydesignation(@Param("designation") String desigation,Pageable pageable);

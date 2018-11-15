@@ -23,6 +23,8 @@ import com.example.demo.model.Employee;
 @RepositoryRestResource(collectionResourceRel="departments",path="departments")
 public interface DeptRepo extends JpaRepository<Department, Integer> {
 	
+	@RestResource(path = "bydeptid", rel = "bydeptid")
+	Page<Department> findAllBydeptid(@Param("deptid") List<Employee> deptid,Pageable pageable);
 	
 	@RestResource(path = "bydeptname", rel = "bydeptname")
 	Page<Department> findAllBydeptname(@Param("deptname") List<Employee> deptname,Pageable pageable);

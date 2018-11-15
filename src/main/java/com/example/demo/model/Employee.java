@@ -36,8 +36,8 @@ public class Employee {
 	
 	//
 	@ManyToOne
-	@JoinColumn(name="deptname")
-	private Department department;
+	@JoinColumn(name="deptid")
+	private Department deptid;
 //	private String deptname;
 	
 	//
@@ -52,23 +52,12 @@ public class Employee {
 	
 	
 	/////
-	public Department getDepartment() {
-		return department;
+	public Department getDeptid() {
+		return deptid;
 	}
-	public void setDepartment(Department department) {
-		this.department = department;
+	public void setDeptid(Department deptid) {
+		this.deptid = deptid;
 	}
-	
-	
-	///////
-//	public String getDeptname() {
-//		return deptname;
-//	}
-//	public void setDeptname(String deptname) {
-//		this.deptname = deptname;
-//	}
-	
-	
 	
 	
 	

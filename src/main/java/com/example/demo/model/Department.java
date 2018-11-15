@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
@@ -18,32 +19,34 @@ import com.fasterxml.jackson.annotation.JsonManagedReference;
 public class Department {
 
 	@Id
+	private int deptid;
+	@Column(unique=true)
 	private String deptname;
-//	private String depthead;
 	
-//	@OneToOne(mappedBy="empname")
-	@OneToOne
-	@JoinColumn(name="empname")
-	private Employee depthead;
+	@Column(nullable=true)
+	private String depthead;
+	
 	
 		
 
-//	public String getDepthead() {
-//		return depthead;
-//	}
-//	public void setDepthead(String depthead) {
-//		this.depthead = depthead;
-//	}
+	public String getDepthead() {
+		return depthead;
+	}
+	public void setDepthead(String depthead) {
+		this.depthead = depthead;
+	}
 	
 	
 	
-//	public List<Employee> getDeptname() {
-//		return deptname;
-//	}
-//	public void setDeptname(List<Employee> deptname) {
-//		this.deptname = deptname;
-//	}
+	
 
+	
+	public int getDeptid() {
+		return deptid;
+	}
+	public void setDeptid(int deptid) {
+		this.deptid = deptid;
+	}
 	
 	
 	
