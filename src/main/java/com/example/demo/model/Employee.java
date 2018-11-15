@@ -61,8 +61,10 @@ public class Employee {
 	private int grade;
 	private String city;
 	private String country;
+	
+	
 	@Temporal(TemporalType.DATE)
-	private Date dOJ;
+	private Date doj;
 	private String designation;//total 10 attributes
 	
 	
@@ -143,11 +145,11 @@ public class Employee {
 	public void setSkill(String skill) {
 		this.skill = skill;
 	}
-	public Date getDOJ() {
-		return dOJ;
+	public Date getDoj() {
+		return doj;
 	}
-	public void setDOJ(Date dOJ) {
-		this.dOJ = dOJ;
+	public void setDoj(Date doj) {
+		this.doj = doj;
 	}
 	public String getDesignation() {
 		return designation;
@@ -159,7 +161,7 @@ public class Employee {
 	@Override
 	public String toString() {
 		return "Employee [empid=" + empid + ", empname=" + empname + ", dept=" +department+ ", skill=" + skill + ", DOJ="
-				+ dOJ + ", designation=" + designation + "]";
+				+ doj + ", designation=" + designation + "]";
 	}
 	
 	

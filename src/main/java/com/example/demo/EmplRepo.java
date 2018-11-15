@@ -43,7 +43,7 @@ public interface EmplRepo extends JpaRepository<Employee, Integer> {
     Page<Employee> findAllBydesignation(@Param("designation") String desigation,Pageable pageable);
 	
 	@RestResource(path = "bydoj", rel = "bydoj")
-    Page<Employee> findAllBydOJ(@Param("doj") Date dOJ,Pageable pageable);
+    List<Employee> findAllBydoj(@Param("doj")Date doj);
 //	List<Employee> findAllByOrderBydojAsc();
 //	List<Employee> findAllByOrderBydojDesc();
 	
