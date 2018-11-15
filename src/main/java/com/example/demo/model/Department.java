@@ -7,10 +7,13 @@ import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
@@ -18,7 +21,9 @@ import com.fasterxml.jackson.annotation.JsonManagedReference;
 //@Table(name="department")
 public class Department {
 
-	@Id
+	@Id//UNCOMMENT ID and next two lines
+	@GeneratedValue(strategy=GenerationType.AUTO, generator="my_seq_gene")
+	@SequenceGenerator(name="my_seq_gene", sequenceName="depid_seq",allocationSize=1)
 	private int deptid;
 	@Column(unique=true)
 	private String deptname;
