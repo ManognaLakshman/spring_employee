@@ -1,9 +1,11 @@
 package com.example.demo.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
 
 import javax.persistence.Column;
+import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -20,27 +22,28 @@ import javax.persistence.TemporalType;
 import org.hibernate.annotations.GenericGenerator;
 //import org.springframework.data.jpa.repository.Temporal;
 //import org.jboss.logging.Field;
-//
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 
 @Entity
-//@Table(name="employee")
-public class Employee {
+@Table(name="employee")
+public class Employee implements Serializable{
 	
 	@Id//UNCOMMENT ID and next two lines
 	@GeneratedValue(strategy=GenerationType.AUTO, generator="my_seq_gen")
 	@SequenceGenerator(name="my_seq_gen", sequenceName="id_seq",allocationSize=1)
 	private int empid;	
+	
 	private String empname;
 	
 	
-	//
-	@ManyToOne
+	
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name="deptid")
 	private Department deptid;
-//	private String deptname;
 	
-	//
+	
 	private String skill;
 	private float salary;
 	private int grade;
@@ -51,14 +54,13 @@ public class Employee {
 	private String designation;//total 10 attributes
 	
 	
-	/////
+	/////deptid setter and getter
 	public Department getDeptid() {
 		return deptid;
 	}
 	public void setDeptid(Department deptid) {
 		this.deptid = deptid;
 	}
-	
 	
 	
 	

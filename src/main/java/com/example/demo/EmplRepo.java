@@ -22,7 +22,8 @@ import com.example.demo.model.Employee;
 
 
 @CrossOrigin()
-@RepositoryRestResource(collectionResourceRel="employees",path="employees")
+
+@RepositoryRestResource(collectionResourceRel="employees",path="employees",excerptProjection = InlineRecords2.class)
 public interface EmplRepo extends JpaRepository<Employee, Integer> {
 
 	//
@@ -40,7 +41,7 @@ public interface EmplRepo extends JpaRepository<Employee, Integer> {
 //	@RestResource(path = "bydept", rel = "bydept")
 //	Page<Employee> findAllBydept(@Param("dept") String dept,Pageable pageable);
 	@RestResource(path = "bydeptid", rel = "bydeptid")
-	Page<Employee> findBydeptid(@Param("deptid") String deptid,Pageable pageable);//findAllBydeptDeptname 
+	List<Employee> findBydeptid(@Param("deptid") int deptid);//findAllBydeptDeptname 
 	
 	@RestResource(path = "bydesignation", rel = "bydesignation")
     Page<Employee> findAllBydesignation(@Param("designation") String desigation,Pageable pageable);
