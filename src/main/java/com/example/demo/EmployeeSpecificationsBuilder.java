@@ -11,37 +11,65 @@ import org.springframework.data.jpa.domain.Specification;
 
 
 import com.example.demo.model.Employee;
-import com.example.demo.model.SearchCriteria;
+import com.example.demo.model.SearchOperation;
+import com.example.demo.model.SpecSearchCriteria;
 
-public class EmployeeSpecificationsBuilder {
+public final class EmployeeSpecificationsBuilder {
     
-    private final List<SearchCriteria> params;
- 
-    public EmployeeSpecificationsBuilder() {
-        params = new ArrayList<SearchCriteria>();
-    }
- 
-    public EmployeeSpecificationsBuilder with(String key, String operation, Object value) {
-        params.add(new SearchCriteria(key, operation, value));
-        return this;
-    }
- 
-    public Specification<Employee> build() {
-        if (params.size() == 0) {
-            return null;
-        }
- 
-        @SuppressWarnings("rawtypes")
-		List<Specification> specs = params.stream().map(EmployeeSpecification::new).collect(Collectors.toList());
-               
-              Specification<Employee> result = specs.get(0);
-       
-              for (int i = 1; i < params.size(); i++) {
-                  result = params.get(i).isOrPredicate()? Specification.where(result).or(specs.get(i)): Specification.where(result).and(specs.get(i));
-              }       
-              return result;
-          }
-    
-    
-    
-      }
+	 private final List<SpecSearchCriteria> params;
+
+	    public EmployeeSpecificationsBuilder() {
+	        params = new ArrayList<>();
+	    }
+
+	    // API
+
+	    public final EmployeeSpecificationsBuilder with(final String key, final String operation, final Object value, final String prefix, final String suffix) {
+	        return with(null, key, operation, value, prefix, suffix);
+	    }
+
+	    public final EmployeeSpecificationsBuilder with(final String orPredicate, final String key, final String operation, final Object value, final String prefix, final String suffix) {
+	        SearchOperation op = SearchOperation.getSimpleOperation(operation.charAt(0));
+	        if (op != null) {
+	            if (op == SearchOperation.EQUALITY) { // the operation may be complex operation
+	                final boolean startWithAsterisk = prefix != null && prefix.contains(SearchOperation.ZERO_OR_MORE_REGEX);
+	                final boolean endWithAsterisk = suffix != null && suffix.contains(SearchOperation.ZERO_OR_MORE_REGEX);
+
+	                if (startWithAsterisk && endWithAsterisk) {
+	                    op = SearchOperation.CONTAINS;
+	                } else if (startWithAsterisk) {
+	                    op = SearchOperation.ENDS_WITH;
+	                } else if (endWithAsterisk) {
+	                    op = SearchOperation.STARTS_WITH;
+	                }
+	            }
+	            params.add(new SpecSearchCriteria(orPredicate, key, op, value));
+	        }
+	        return this;
+	    }
+
+	    public Specification<Employee> build() {
+	        if (params.size() == 0)
+	            return null;
+
+	        Specification<Employee> result = new EmployeeSpecification(params.get(0));
+	     
+	        for (int i = 1; i < params.size(); i++) {
+	            result = params.get(i).isOrPredicate()
+	              ? Specification.where(result).or(new EmployeeSpecification(params.get(i))) 
+	              : Specification.where(result).and(new EmployeeSpecification(params.get(i)));
+	        }
+	        
+	        return result;
+	    }
+
+	    public final EmployeeSpecificationsBuilder with(EmployeeSpecification spec) {
+	        params.add(spec.getCriteria());
+	        return this;
+	    }
+
+	    public final EmployeeSpecificationsBuilder with(SpecSearchCriteria criteria) {
+	        params.add(criteria);
+	        return this;
+	    }
+	}
