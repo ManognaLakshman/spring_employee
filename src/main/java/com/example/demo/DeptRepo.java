@@ -25,13 +25,13 @@ import com.example.demo.model.Employee;
 public interface DeptRepo extends JpaRepository<Department, Integer> {
 	
 	@RestResource(path = "bydeptid", rel = "bydeptid")
-	Page<Department> findAllBydeptid(@Param("deptid") List<Employee> deptid,Pageable pageable);
+	Page<Department> findAllBydeptidContaining(@Param("deptid") int deptid,Pageable pageable);
 	
 	@RestResource(path = "bydeptname", rel = "bydeptname")
-	Page<Department> findAllBydeptname(@Param("deptname") List<Employee> deptname,Pageable pageable);
+	Page<Department> findAllBydeptnameContaining(@Param("deptname") String deptname,Pageable pageable);
 	
-//	@RestResource(path = "bydepthead", rel = "bydepthead")
-//	Page<Department> findAllBydepthead(@Param("depthead") String depthead,Pageable pageable);//UNCOMMENT
+	@RestResource(path = "bydepthead", rel = "bydepthead")
+	Page<Department> findAllBydepthead(@Param("depthead") int depthead,Pageable pageable);//UNCOMMENT
 	
 	//
 	

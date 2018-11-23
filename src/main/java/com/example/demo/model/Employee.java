@@ -23,13 +23,22 @@ import org.hibernate.annotations.GenericGenerator;
 //import org.springframework.data.jpa.repository.Temporal;
 //import org.jboss.logging.Field;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 
 @Entity
 @Table(name="employee")
 public class Employee implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@Id//UNCOMMENT ID and next two lines
 	@GeneratedValue(strategy=GenerationType.AUTO, generator="my_seq_gen")
 	@SequenceGenerator(name="my_seq_gen", sequenceName="id_seq",allocationSize=1)
@@ -41,7 +50,12 @@ public class Employee implements Serializable{
 	
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name="deptid")
+	//this is written to avoid infinite recursion
+	@JsonManagedReference
+	//	
 	private Department deptid;
+	
+	
 	
 	
 	private String skill;

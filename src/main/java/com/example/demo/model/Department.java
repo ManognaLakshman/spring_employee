@@ -21,6 +21,8 @@ import javax.persistence.Table;
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity
@@ -44,7 +46,10 @@ public class Department implements Serializable{
 	//comment if screwed---------
 	@OneToOne(fetch=FetchType.EAGER)
 	@JoinColumn(name="deptheadid",nullable=true)
-//	@Fetch(FetchMode.JOIN)
+	//
+	@JsonBackReference
+//	@JsonIgnore//comment this json ignore. dont useS
+	//
 	private Employee depthead;
 	
 	public Employee getDepthead() {

@@ -11,7 +11,7 @@ import com.example.demo.model.Employee;
 public interface InlineRecords2 {
 	int getEmpid();
 	String getEmpname();
-	Department getDeptid();
+	Department getDeptid();//uncomment
 	String getSkill();
 	float getSalary();
 	int getGrade();
