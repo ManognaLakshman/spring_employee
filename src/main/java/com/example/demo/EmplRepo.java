@@ -26,14 +26,9 @@ import com.querydsl.core.types.dsl.StringPath;
 @CrossOrigin()
 
 @RepositoryRestResource(collectionResourceRel="employees",path="employees",excerptProjection = InlineRecords2.class)
-public interface EmplRepo extends JpaRepository<Employee, Integer>, JpaSpecificationExecutor<Employee> , QuerydslPredicateExecutor<Employee>, QuerydslBinderCustomizer<QEmployee> {
+public interface EmplRepo extends JpaRepository<Employee, Integer>{
 	//websupport
-//	@Override
-//    default public void customize(final QuerydslBindings bindings, final QMyUser root) {
-//        bindings.bind(String.class)
-//          .first((SingleValueBinding<StringPath, String>) StringExpression::containsIgnoreCase);
-//        bindings.excluding(root.email);
-//    }
+
 	//
 	
 	
