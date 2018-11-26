@@ -1,12 +1,7 @@
 package com.example.demo;
 
-import java.util.List;
-
-import org.hibernate.Session;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import com.example.demo.model.Department;
 
 @SpringBootApplication
 public class AppApplication {
