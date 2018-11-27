@@ -39,7 +39,7 @@ public class Employee implements Serializable{
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name="deptid")
 	//this is written to avoid infinite recursion
-	@JsonManagedReference
+//	@JsonManagedReference//cannot post if uncommented
 	//	
 	private Department deptid;
 	

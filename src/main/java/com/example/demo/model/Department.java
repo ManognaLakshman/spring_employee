@@ -14,6 +14,7 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Table(name="department")
@@ -37,8 +38,8 @@ public class Department implements Serializable{
 	@OneToOne(fetch=FetchType.EAGER)
 	@JoinColumn(name="deptheadid",nullable=true)
 	//
-	@JsonBackReference
-//	@JsonIgnore//comment this json ignore. dont useS
+//	@JsonBackReference//cannot be used if post is to be carried out
+	@JsonIgnore//comment this json ignore. dont useS
 	//
 	private Employee depthead;
 	

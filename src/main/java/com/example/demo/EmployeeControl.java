@@ -3,6 +3,8 @@ package com.example.demo;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.data.querydsl.binding.QuerydslPredicate;
 import org.springframework.data.web.config.EnableSpringDataWebSupport;
@@ -36,16 +38,13 @@ public class EmployeeControl{
 	
 	@GetMapping(value = "/employees/search/byadvsearch")
     @ResponseBody
-    public List<Employee> findAllByAdvPredicate(@RequestParam(value = "advsearch") String search) {
+    public Page<Employee> findAllByAdvPredicate(@RequestParam(value = "advsearch") String search,Pageable pageable) {
         Specification<Employee> spec = resolveSpecificationFromInfixExpr(search);
-        return emplrepo.findAll(spec);
+        return emplrepo.findAll(spec, pageable);
     }
     protected Specification<Employee> resolveSpecificationFromInfixExpr(String searchParameters) {
         CriteriaParser parser = new CriteriaParser();
         GenericSpecificationsBuilder<Employee> specBuilder = new GenericSpecificationsBuilder<>();
         return specBuilder.build(parser.parse(searchParameters), EmployeeSpecification::new);
-        
-        
-        
     }
 }

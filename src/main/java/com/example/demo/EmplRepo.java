@@ -1,6 +1,7 @@
 package com.example.demo;
 
 import java.util.Date;
+
 import java.util.List;
 
 import org.springframework.data.domain.Page;
@@ -37,7 +38,7 @@ public interface EmplRepo extends JpaRepository<Employee, Integer>{
 	
 	
 	//
-	List<Employee> findAll(Specification spec );//comment
+	Page<Employee> findAll(Specification spec,Pageable pageable);//comment
 //	
 	@RestResource(path = "byempid", rel = "byempid")
     Page<Employee> findAllByempid(@Param("empid") Integer empid,Pageable pageable);
