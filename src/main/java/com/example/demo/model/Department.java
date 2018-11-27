@@ -39,7 +39,7 @@ public class Department implements Serializable{
 	@JoinColumn(name="deptheadid",nullable=true)
 	//
 //	@JsonBackReference//cannot be used if post is to be carried out
-	@JsonIgnore//comment this json ignore. dont useS
+	@JsonIgnore//comment this json ignore. dont use
 	//
 	private Employee depthead;
 	
