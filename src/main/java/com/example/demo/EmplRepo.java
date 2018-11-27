@@ -7,10 +7,10 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.querydsl.QuerydslPredicateExecutor;
 import org.springframework.data.querydsl.binding.QuerydslBinderCustomizer;
 import org.springframework.data.querydsl.binding.QuerydslBindings;
+import org.springframework.data.querydsl.binding.SingleValueBinding;
 import org.springframework.data.repository.query.Param;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.data.rest.core.annotation.RestResource;
@@ -27,16 +27,20 @@ import com.querydsl.core.types.dsl.StringPath;
 
 @RepositoryRestResource(collectionResourceRel="employees",path="employees",excerptProjection = InlineRecords2.class)
 public interface EmplRepo extends JpaRepository<Employee, Integer>{
-	//websupport
-
+//, QuerydslPredicateExecutor<Employee>, QuerydslBinderCustomizer<QEmployee> {
+	//REST Query Language with Querydsl Web Support
+//	@Override
+//    default public void customize(final QuerydslBindings bindings, final QEmployee root) {
+//        bindings.bind(String.class).first((SingleValueBinding<StringPath, String>) StringExpression::containsIgnoreCase);
+//    }
 	//
 	
 	
 	//
-	Page<Employee> findAll(Specification spec,Pageable pageable);//comment
+	List<Employee> findAll(Specification spec );//comment
 //	
 	@RestResource(path = "byempid", rel = "byempid")
-    Page<Employee> findAllByempidContaining(@Param("empid") String empid,Pageable pageable);
+    Page<Employee> findAllByempid(@Param("empid") Integer empid,Pageable pageable);
 	
 	@RestResource(path = "byempname", rel = "byempame")
     Page<Employee> findAllByempnameContaining(@Param("empname") String empname,Pageable pageable);//remove StartingWith
@@ -47,25 +51,25 @@ public interface EmplRepo extends JpaRepository<Employee, Integer>{
 //	@RestResource(path = "bydept", rel = "bydept")
 //	Page<Employee> findAllBydept(@Param("dept") String dept,Pageable pageable);
 	@RestResource(path = "bydeptid", rel = "bydeptid")
-	List<Employee> findBydeptidContaining(@Param("deptid") int deptid);//findAllBydeptDeptname 
+	List<Employee> findBydeptid(@Param("deptid") Integer deptid);//findAllBydeptDeptname 
 	
 	@RestResource(path = "bydesignation", rel = "bydesignation")
     Page<Employee> findAllBydesignationContaining(@Param("designation") String desigation,Pageable pageable);
 	
 	@RestResource(path = "bydoj", rel = "bydoj")
-    List<Employee> findAllBydojContaining(@Param("doj")Date doj);
+    List<Employee> findAllBydoj(@Param("doj")Date doj);
 //	List<Employee> findAllByOrderBydojAsc();
 //	List<Employee> findAllByOrderBydojDesc();
 	
 	
 	
 	@RestResource(path = "bysalary", rel = "bysalary")
-    Page<Employee> findAllBysalaryContaining(@Param("salary") float salary,Pageable pageable);
+    Page<Employee> findAllBysalary(@Param("salary") float salary,Pageable pageable);
 //	//
 	
 	
 	@RestResource(path = "bygrade", rel = "bygrade")
-    Page<Employee> findAllBygradeContaining(@Param("grade") int grade,Pageable pageable);
+    Page<Employee> findAllBygrade(@Param("grade") Integer grade,Pageable pageable);
 	
 	
 	@RestResource(path = "bycity", rel = "bycity")
