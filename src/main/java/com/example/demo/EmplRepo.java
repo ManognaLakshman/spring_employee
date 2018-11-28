@@ -37,7 +37,7 @@ public interface EmplRepo extends JpaRepository<Employee, Integer>{
 	//
 	
 	
-	//
+//
 	Page<Employee> findAll(Specification spec,Pageable pageable);//comment
 //	
 	@RestResource(path = "byempid", rel = "byempid")

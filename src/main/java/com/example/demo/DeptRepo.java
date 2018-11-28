@@ -15,7 +15,7 @@ import com.example.demo.model.Department;
 public interface DeptRepo extends JpaRepository<Department, Integer> {
 	
 	@RestResource(path = "bydeptid", rel = "bydeptid")
-	Page<Department> findAllBydeptidContaining(@Param("deptid") int deptid,Pageable pageable);
+	Page<Department> findAllBydeptid(@Param("deptid") int deptid,Pageable pageable);
 	
 	@RestResource(path = "bydeptname", rel = "bydeptname")
 	Page<Department> findAllBydeptnameContaining(@Param("deptname") String deptname,Pageable pageable);
