@@ -15,6 +15,7 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 
@@ -41,6 +42,8 @@ public class Employee implements Serializable{
 	//this is written to avoid infinite recursion
 //	@JsonManagedReference//cannot post if uncommented
 	//	
+	
+
 	private Department deptid;
 	
 	
@@ -51,6 +54,8 @@ public class Employee implements Serializable{
 	private int grade;
 	private String city;
 	private String country;
+	
+//	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd@HH:mm:ss.SSSZ")
 	@Temporal(TemporalType.DATE)
 	private Date doj;
 	private String designation;//total 10 attributes

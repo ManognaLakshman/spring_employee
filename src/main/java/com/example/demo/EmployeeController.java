@@ -32,7 +32,7 @@ import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
 @EnableSpringDataWebSupport
 @RestController
 
-public class EmployeeControl{
+public class EmployeeController{
 
 	@Autowired
     private EmplRepo emplrepo;

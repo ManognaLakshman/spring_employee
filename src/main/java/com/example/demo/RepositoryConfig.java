@@ -3,6 +3,7 @@ package com.example.demo;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
 import org.springframework.data.rest.webmvc.config.RepositoryRestConfigurerAdapter;
+import org.springframework.http.MediaType;
 
 @Configuration
 public class RepositoryConfig extends RepositoryRestConfigurerAdapter {
@@ -13,6 +14,8 @@ public class RepositoryConfig extends RepositoryRestConfigurerAdapter {
     
     config.getProjectionConfiguration().addProjection(InlineRecords2.class);
     
-    
+    //
+    config.setDefaultMediaType(MediaType.APPLICATION_JSON);
+    //
   }
 }
