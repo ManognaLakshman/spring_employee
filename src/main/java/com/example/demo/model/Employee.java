@@ -42,8 +42,6 @@ public class Employee implements Serializable{
 	//this is written to avoid infinite recursion
 //	@JsonManagedReference//cannot post if uncommented
 	//	
-	
-
 	private Department deptid;
 	
 	

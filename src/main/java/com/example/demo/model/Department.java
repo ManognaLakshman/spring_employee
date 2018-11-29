@@ -15,6 +15,8 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonView;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 @Entity
 @Table(name="department")
@@ -39,7 +41,8 @@ public class Department implements Serializable{
 	@JoinColumn(name="deptheadid",nullable=true)
 	//
 //	@JsonBackReference//cannot be used if post is to be carried out
-	@JsonIgnore//comment this json ignore. dont use
+//	@JsonIgnore//comment this json ignore. dont use
+	
 	//
 	private Employee depthead;
 	
