@@ -16,6 +16,7 @@ public class RepositoryConfig extends RepositoryRestConfigurerAdapter {
     
     //
     config.setDefaultMediaType(MediaType.APPLICATION_JSON);
+    config.useHalAsDefaultJsonMediaType(false);
     //
   }
 }
