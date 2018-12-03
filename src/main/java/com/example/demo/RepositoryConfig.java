@@ -13,6 +13,8 @@ public class RepositoryConfig extends RepositoryRestConfigurerAdapter {
     config.getProjectionConfiguration().addProjection(InlineRecords.class);
     
     config.getProjectionConfiguration().addProjection(InlineRecords2.class);
+
+    config.getProjectionConfiguration().addProjection(InlineRecords3.class);
     
     //
     config.setDefaultMediaType(MediaType.APPLICATION_JSON);

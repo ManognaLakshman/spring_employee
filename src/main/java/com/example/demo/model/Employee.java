@@ -17,10 +17,13 @@ import javax.persistence.TemporalType;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 
 @Entity
 @Table(name="employee")
+
+@JsonPropertyOrder({ "empid", "empname","skill","salary","grade","city","country","doj","designation" })
 public class Employee implements Serializable{
 	
 	/**

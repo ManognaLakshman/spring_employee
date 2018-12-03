@@ -15,11 +15,14 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonView;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 @Entity
 @Table(name="department")
+
+@JsonPropertyOrder({ "deptid", "deptname","depthead" })
 public class Department implements Serializable{
 
 	@Id//UNCOMMENT ID and next two lines
