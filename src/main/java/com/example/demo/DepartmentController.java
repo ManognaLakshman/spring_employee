@@ -1,6 +1,8 @@
 package com.example.demo;
 
 import java.util.List;
+
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -21,8 +23,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.model.Employee;
-import com.example.demo.model.EmployeeSpecification;
+import com.example.demo.model.Department;
+import com.example.demo.model.DepartmentSpecification;
 import com.example.demo.model.GenericSpecificationsBuilder;
 import com.querydsl.core.types.Predicate;
 
@@ -33,46 +35,40 @@ import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
 @EnableSpringDataWebSupport
 @RestController
 
-public class EmployeeController{
+public class DepartmentController{
 
 	@Autowired
-    private EmplRepo emplrepo;
+    private DeptRepo deptrepo;
 	
-////REST Query Language with Querydsl Web Support
-//	@RequestMapping(method = RequestMethod.GET, value = "/Employees")
-//    @ResponseBody
-//    public Iterable<Employee> findAllByWebQuerydsl(@QuerydslPredicate(root = Employee.class) Predicate predicate) {
-//        return emplrepo.findAll(predicate);
-//    }
-//	
-	//comment these
+
+	//comment these if projection is not required
 	@Autowired
 	private ProjectionFactory factory;
 	@Autowired
-	private PagedResourcesAssembler<InlineRecords2> assembler;
+	private PagedResourcesAssembler<InlineRecords> assembler;
 
-	//
+	//if this is used...only json paged obj is returned
 	
-//	@GetMapping(value = "/employees/search/byadvsearch",produces = "application/json")//remove "produces" key
+//	@GetMapping(value = "/departments/search/byadvsearch",produces = "application/json")//remove "produces" key
 //    @ResponseBody
-//    public Page<Employee> findAllByAdvPredicate(@RequestParam(value = "advsearch") String search,Pageable pageable){
-//        Specification<Employee> spec = resolveSpecificationFromInfixExpr(search);
+//    public Page<Department> findAllByAdvPredicate(@RequestParam(value = "advsearch") String search,Pageable pageable){
+//        Specification<Department> spec = resolveSpecificationFromInfixExpr(search);
 //        return emplrepo.findAll(spec, pageable);
 //       
 //	}
-    protected Specification<Employee> resolveSpecificationFromInfixExpr(String searchParameters) {
+    protected Specification<Department> resolveSpecificationFromInfixExpr(String searchParameters) {
         CriteriaParser parser = new CriteriaParser();
-        GenericSpecificationsBuilder<Employee> specBuilder = new GenericSpecificationsBuilder<>();
-        return specBuilder.build(parser.parse(searchParameters), EmployeeSpecification::new);
+        GenericSpecificationsBuilder<Department> specBuilder = new GenericSpecificationsBuilder<>();
+        return specBuilder.build(parser.parse(searchParameters), DepartmentSpecification::new);
     }
     
-    @GetMapping(value = "/employees/search/byadvsearch",produces = "application/json")//remove "produces" key
+    @GetMapping(value = "/departments/search/byadvsearch",produces = "application/json")//remove "produces" key
     @ResponseBody
     public ResponseEntity<?> findAllByAdvPredicate(@RequestParam(value = "advsearch") String search,Pageable pageable){
-        Specification<Employee> spec = resolveSpecificationFromInfixExpr(search);
-        Page<Employee> emplo= emplrepo.findAll(spec, pageable);
-        Page<InlineRecords2> projected = emplo.map(l -> factory.createProjection(InlineRecords2.class, l));
-        PagedResources<Resource<InlineRecords2>> resources = assembler.toResource(projected);
+        Specification<Department> spec = resolveSpecificationFromInfixExpr(search);
+        Page<Department> emplo= deptrepo.findAll(spec, pageable);
+        Page<InlineRecords> projected = emplo.map(l -> factory.createProjection(InlineRecords.class, l));
+        PagedResources<Resource<InlineRecords>> resources = assembler.toResource(projected);
         return ResponseEntity.ok(resources);
        
 	}
