@@ -2,6 +2,7 @@ package com.example.demo.model;
 
 import java.io.Serializable;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -40,7 +41,7 @@ public class Department implements Serializable{
 	
 	
 	//comment if screwed---------
-	@OneToOne(fetch=FetchType.EAGER)
+	@OneToOne(fetch=FetchType.EAGER,cascade=CascadeType.ALL)
 	@JoinColumn(name="deptheadid",nullable=true)
 	//
 //	@JsonBackReference//cannot be used if post is to be carried out

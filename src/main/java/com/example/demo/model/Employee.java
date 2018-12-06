@@ -3,6 +3,7 @@ package com.example.demo.model;
 import java.io.Serializable;
 import java.util.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -40,7 +41,7 @@ public class Employee implements Serializable{
 	
 	
 	
-	@ManyToOne(fetch = FetchType.EAGER)
+	@ManyToOne(fetch = FetchType.EAGER,cascade=CascadeType.ALL)
 	@JoinColumn(name="deptid")
 	//this is written to avoid infinite recursion
 //	@JsonManagedReference//cannot post if uncommented

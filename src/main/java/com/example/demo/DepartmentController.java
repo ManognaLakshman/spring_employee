@@ -3,6 +3,7 @@ package com.example.demo;
 import java.util.List;
 
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -36,11 +37,10 @@ import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
 @EnableSpringDataWebSupport
 @RestController
 
-public class DepartmentController{
+public class DepartmentController {
 
 	@Autowired
     private DeptRepo deptrepo;
-	
 
 	//comment these if projection is not required
 	@Autowired

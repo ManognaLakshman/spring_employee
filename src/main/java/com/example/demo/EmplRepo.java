@@ -3,6 +3,7 @@ package com.example.demo;
 import java.util.Date;
 
 
+
 import java.util.List;
 
 import org.springframework.data.domain.Page;
@@ -18,6 +19,7 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.data.rest.core.annotation.RestResource;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
+import com.example.demo.model.Department;
 import com.example.demo.model.Employee;
 import com.example.demo.model.QEmployee;
 import com.querydsl.core.types.dsl.StringExpression;
@@ -26,7 +28,7 @@ import com.querydsl.core.types.dsl.StringPath;
 
 
 @CrossOrigin()
-
+//@Api(tags = "Employee Entity")
 @RepositoryRestResource(collectionResourceRel="employees",path="employees",excerptProjection = InlineRecords2.class)
 public interface EmplRepo extends JpaRepository<Employee, Integer>{
 //, QuerydslPredicateExecutor<Employee>, QuerydslBinderCustomizer<QEmployee> {
@@ -37,7 +39,6 @@ public interface EmplRepo extends JpaRepository<Employee, Integer>{
 //    }
 	//
 	
-	
 //
 	@RestResource
 	Page<Employee> findAll(Specification spec,Pageable pageable);//comment
@@ -45,8 +46,10 @@ public interface EmplRepo extends JpaRepository<Employee, Integer>{
 	@RestResource(path = "byempid", rel = "byempid")
     Page<Employee> findAllByempid(@Param("empid") Integer empid,Pageable pageable);
 	
+	
+//	 @ApiOperation("find all employees who have the given name")
 	@RestResource(path = "byempname", rel = "byempame")
-    Page<Employee> findAllByempnameContaining(@Param("empname") String empname,Pageable pageable);//remove StartingWith
+    Page<Employee> findAllByempnameContaining(/*@ApiParam(name = "empid", value = "ID of the employee", type = "body")*/@Param("empname") String empname,Pageable pageable);//remove StartingWith
 	
 	@RestResource(path = "byskill", rel = "byskill")
     Page<Employee> findByskillContaining(@Param("skill") String skill,Pageable pageable);
