@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.department;
 
 import java.util.List;
 
@@ -25,9 +25,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.demo.InlineRecords;
+import com.example.demo.advancedsearch.CriteriaParser;
+import com.example.demo.advancedsearch.GenericSpecificationsBuilder;
 import com.example.demo.model.Department;
-import com.example.demo.model.DepartmentSpecification;
-import com.example.demo.model.GenericSpecificationsBuilder;
 import com.querydsl.core.types.Predicate;
 
 
@@ -42,21 +43,11 @@ public class DepartmentController {
 	@Autowired
     private DeptRepo deptrepo;
 
-	//comment these if projection is not required
 	@Autowired
 	private ProjectionFactory factory;
 	@Autowired
 	private PagedResourcesAssembler<InlineRecords> assembler;
 
-	//if this is used...only json paged obj is returned
-	
-//	@GetMapping(value = "/departments/search/byadvsearch",produces = "application/json")//remove "produces" key
-//    @ResponseBody
-//    public Page<Department> findAllByAdvPredicate(@RequestParam(value = "advsearch") String search,Pageable pageable){
-//        Specification<Department> spec = resolveSpecificationFromInfixExpr(search);
-//        return emplrepo.findAll(spec, pageable);
-//       
-//	}
     protected Specification<Department> resolveSpecificationFromInfixExpr(String searchParameters) {
         CriteriaParser parser = new CriteriaParser();
         GenericSpecificationsBuilder<Department> specBuilder = new GenericSpecificationsBuilder<>();

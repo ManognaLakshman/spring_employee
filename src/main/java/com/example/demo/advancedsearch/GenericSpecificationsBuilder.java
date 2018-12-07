@@ -1,4 +1,4 @@
-package com.example.demo.model;
+package com.example.demo.advancedsearch;
 
 import java.util.ArrayList;
 import java.util.Collections;

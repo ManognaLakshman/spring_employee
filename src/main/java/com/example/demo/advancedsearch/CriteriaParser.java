@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.advancedsearch;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -13,8 +13,6 @@ import java.util.regex.Pattern;
 import org.springframework.data.jpa.domain.Specification;
 
 import com.example.demo.model.Employee;
-import com.example.demo.model.SearchOperation;
-import com.example.demo.model.SpecSearchCriteria;
 import com.google.common.base.Joiner;
 
 

@@ -15,10 +15,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 public interface InlineRecords2 {
 	int getEmpid();
 	String getEmpname();
-//	Department getDeptid();//uncomment
-	//
+	
+//	Department getDeptid();
 	InlineRecords getDeptid();
-	//
+	
 	
 	String getSkill();
 	float getSalary();

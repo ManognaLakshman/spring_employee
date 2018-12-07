@@ -26,7 +26,7 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 @JsonPropertyOrder({ "deptid", "deptname","depthead" })
 public class Department implements Serializable{
 
-	@Id//UNCOMMENT ID and next two lines
+	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO, generator="my_seq_gene")
 	@SequenceGenerator(name="my_seq_gene", sequenceName="depid_seq",allocationSize=1)
 	private int deptid;
@@ -34,42 +34,21 @@ public class Department implements Serializable{
 	@Column(unique=true)
 	private String deptname;
 	
-//	@Column(nullable=true)//uncomment if screwed up
-//	private String depthead;
-	
-	
-	
-	
-	//comment if screwed---------
 	@OneToOne(fetch=FetchType.EAGER,cascade=CascadeType.ALL)
 	@JoinColumn(name="deptheadid",nullable=true)
-	//
-//	@JsonBackReference//cannot be used if post is to be carried out
-//	@JsonIgnore//comment this json ignore. dont use
-	
-	//
 	private Employee depthead;
 	
+
+	
+	
+	
+
 	public Employee getDepthead() {
 		return depthead;
 	}
 	public void setDepthead(Employee depthead) {
 		this.depthead = depthead;
 	}
-	//---------------------------
-
-		
-
-	
-	
-	
-//	public String getDepthead() {
-//		return depthead;
-//	}
-//	public void setDepthead(String depthead) {
-//		this.depthead = depthead;
-//	}
-	
 
 	
 	public int getDeptid() {

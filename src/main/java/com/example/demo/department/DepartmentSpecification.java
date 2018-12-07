@@ -1,4 +1,4 @@
-package com.example.demo.model;
+package com.example.demo.department;
 
 
 import javax.persistence.criteria.CriteriaBuilder;
@@ -7,6 +7,9 @@ import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 
 import org.springframework.data.jpa.domain.Specification;
+
+import com.example.demo.advancedsearch.SpecSearchCriteria;
+import com.example.demo.model.Department;
 
 public class DepartmentSpecification implements Specification<Department> {
 

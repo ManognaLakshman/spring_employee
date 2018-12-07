@@ -19,6 +19,7 @@ import javax.persistence.TemporalType;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonUnwrapped;
 
 
 @Entity
@@ -27,29 +28,20 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({ "empid", "empname","skill","salary","grade","city","country","doj","designation" })
 public class Employee implements Serializable{
 	
-	/**
-	 * 
-	 */
+	
 	private static final long serialVersionUID = 1L;
 
-	@Id//UNCOMMENT ID and next two lines
+	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO, generator="my_seq_gen")
 	@SequenceGenerator(name="my_seq_gen", sequenceName="id_seq",allocationSize=1)
 	private int empid;	
 	
 	private String empname;
 	
-	
-	
 	@ManyToOne(fetch = FetchType.EAGER,cascade=CascadeType.ALL)
 	@JoinColumn(name="deptid")
-	//this is written to avoid infinite recursion
-//	@JsonManagedReference//cannot post if uncommented
-	//	
+//	@JsonUnwrapped
 	private Department deptid;
-	
-	
-	
 	
 	private String skill;
 	private float salary;
@@ -116,9 +108,6 @@ public class Employee implements Serializable{
 		this.empname = empname;
 	}
 	
-	
-	
-	//----------
 	public String getSkill() {
 		return skill;
 	}

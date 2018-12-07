@@ -10,8 +10,8 @@ public interface InlineRecords {
 	
 	int getDeptid();
 	String getDeptname();
+	
 //	Employee getDepthead();
-
 	InlineRecords3 getDepthead();
 }
 

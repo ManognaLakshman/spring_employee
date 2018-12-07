@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.employee;
 
 import java.util.Date;
 
@@ -19,45 +19,37 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.data.rest.core.annotation.RestResource;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
+import com.example.demo.InlineRecords2;
 import com.example.demo.model.Department;
 import com.example.demo.model.Employee;
 import com.example.demo.model.QEmployee;
 import com.querydsl.core.types.dsl.StringExpression;
 import com.querydsl.core.types.dsl.StringPath;
 
+import io.swagger.annotations.Api;
+
 
 
 @CrossOrigin()
-//@Api(tags = "Employee Entity")
+@Api(tags = "Employee Entity")
 @RepositoryRestResource(collectionResourceRel="employees",path="employees",excerptProjection = InlineRecords2.class)
 public interface EmplRepo extends JpaRepository<Employee, Integer>{
-//, QuerydslPredicateExecutor<Employee>, QuerydslBinderCustomizer<QEmployee> {
-	//REST Query Language with Querydsl Web Support
-//	@Override
-//    default public void customize(final QuerydslBindings bindings, final QEmployee root) {
-//        bindings.bind(String.class).first((SingleValueBinding<StringPath, String>) StringExpression::containsIgnoreCase);
-//    }
-	//
-	
-//
+
 	@RestResource
-	Page<Employee> findAll(Specification spec,Pageable pageable);//comment
+	Page<Employee> findAll(Specification spec,Pageable pageable);
 //	
 	@RestResource(path = "byempid", rel = "byempid")
     Page<Employee> findAllByempid(@Param("empid") Integer empid,Pageable pageable);
 	
 	
-//	 @ApiOperation("find all employees who have the given name")
 	@RestResource(path = "byempname", rel = "byempame")
-    Page<Employee> findAllByempnameContaining(/*@ApiParam(name = "empid", value = "ID of the employee", type = "body")*/@Param("empname") String empname,Pageable pageable);//remove StartingWith
+    Page<Employee> findAllByempnameContaining(@Param("empname") String empname,Pageable pageable);
 	
 	@RestResource(path = "byskill", rel = "byskill")
     Page<Employee> findByskillContaining(@Param("skill") String skill,Pageable pageable);
 	
-//	@RestResource(path = "bydept", rel = "bydept")
-//	Page<Employee> findAllBydept(@Param("dept") String dept,Pageable pageable);
 	@RestResource(path = "bydeptid", rel = "bydeptid")
-	List<Employee> findBydeptid(@Param("deptid") Integer deptid);//findAllBydeptDeptname 
+	List<Employee> findBydeptid(@Param("deptid") Department deptid);//findAllBydeptDeptname 
 	
 	@RestResource(path = "bydesignation", rel = "bydesignation")
     Page<Employee> findAllBydesignationContaining(@Param("designation") String desigation,Pageable pageable);
