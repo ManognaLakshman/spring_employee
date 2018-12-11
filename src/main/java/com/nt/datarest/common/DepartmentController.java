@@ -1,4 +1,4 @@
-package com.example.demo.advancedsearch;
+package com.nt.datarest.common;
 
 import java.util.List;
 
@@ -26,10 +26,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.ApplicationRepository;
-import com.example.demo.DepartmentProjection;
-import com.example.demo.department.DeptRepo;
-import com.example.demo.model.Department;
+import com.nt.datarest.model.Department;
+import com.nt.datarest.projections.DepartmentProjection;
+import com.nt.datarest.repository.DeptRepo;
 import com.querydsl.core.types.Predicate;
 
 

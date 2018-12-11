@@ -1,4 +1,4 @@
-package com.example.demo.department;
+package com.nt.datarest.repository;
 
 import org.springframework.data.domain.Page;
 
@@ -10,10 +10,10 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.data.rest.core.annotation.RestResource;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
-import com.example.demo.ApplicationRepository;
-import com.example.demo.DepartmentProjection;
-import com.example.demo.model.Department;
-import com.example.demo.model.Employee;
+import com.nt.datarest.common.ApplicationRepository;
+import com.nt.datarest.model.Department;
+import com.nt.datarest.model.Employee;
+import com.nt.datarest.projections.DepartmentProjection;
 
 @CrossOrigin()
 @RepositoryRestResource(collectionResourceRel="departments",path="departments",excerptProjection = DepartmentProjection.class)

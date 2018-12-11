@@ -1,9 +1,9 @@
-package com.example.demo;
+package com.nt.datarest.projections;
 
 import org.springframework.data.rest.core.config.Projection;
 
-import com.example.demo.model.Department;
-import com.example.demo.model.Employee;
+import com.nt.datarest.model.Department;
+import com.nt.datarest.model.Employee;
 
 @Projection(name = "inlineRecords", types = { Department.class })// THIS IS FOR DEPARTMENT
 public interface DepartmentProjection {

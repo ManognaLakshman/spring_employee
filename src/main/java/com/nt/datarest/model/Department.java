@@ -1,4 +1,4 @@
-package com.example.demo.model;
+package com.nt.datarest.model;
 
 import java.io.Serializable;
 

@@ -1,4 +1,4 @@
-package com.example.demo.advancedsearch;
+package com.nt.datarest.common;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -12,8 +12,8 @@ import java.util.regex.Pattern;
 
 import org.springframework.data.jpa.domain.Specification;
 
-import com.example.demo.model.Employee;
 import com.google.common.base.Joiner;
+import com.nt.datarest.model.Employee;
 
 
 public class CriteriaParser {

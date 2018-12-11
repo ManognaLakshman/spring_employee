@@ -1,6 +1,7 @@
-package com.example.demo.employee;
+package com.nt.datarest.repository;
 
 import java.util.Date;
+
 
 
 
@@ -19,11 +20,11 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.data.rest.core.annotation.RestResource;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
-import com.example.demo.ApplicationRepository;
-import com.example.demo.EmployeeProjection;
-import com.example.demo.model.Department;
-import com.example.demo.model.Employee;
-import com.example.demo.model.QEmployee;
+import com.nt.datarest.model.QEmployee;
+import com.nt.datarest.common.ApplicationRepository;
+import com.nt.datarest.model.Department;
+import com.nt.datarest.model.Employee;
+import com.nt.datarest.projections.EmployeeProjection;
 import com.querydsl.core.types.dsl.StringExpression;
 import com.querydsl.core.types.dsl.StringPath;
 

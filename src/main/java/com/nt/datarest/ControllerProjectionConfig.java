@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.nt.datarest;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -6,7 +6,7 @@ import org.springframework.data.projection.SpelAwareProxyProjectionFactory;
 import org.springframework.http.MediaType;
 
 @Configuration
-class SomeConfig {
+class ControllerProjectionConfig {
 
   @Bean
   public SpelAwareProxyProjectionFactory projectionFactory() {

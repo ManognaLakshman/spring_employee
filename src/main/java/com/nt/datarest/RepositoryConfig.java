@@ -1,10 +1,14 @@
-package com.example.demo;
+package com.nt.datarest;
 
 import org.springframework.context.annotation.Configuration;
 
 import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
 import org.springframework.data.rest.webmvc.config.RepositoryRestConfigurerAdapter;
 import org.springframework.http.MediaType;
+
+import com.nt.datarest.projections.DepartmentProjection;
+import com.nt.datarest.projections.EmployeeProjection;
+import com.nt.datarest.projections.EmployeeProjection2;
 
 @Configuration
 public class RepositoryConfig extends RepositoryRestConfigurerAdapter {

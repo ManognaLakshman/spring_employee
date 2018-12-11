@@ -1,4 +1,4 @@
-package com.example.demo.advancedsearch;
+package com.nt.datarest.common;
 
 import org.slf4j.Logger;
 
@@ -10,8 +10,7 @@ import org.springframework.data.jpa.domain.Specification;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
-import com.example.demo.ApplicationRepository;
-import com.example.demo.model.Department;
+import com.nt.datarest.model.Department;
 
 import java.io.Serializable;
 import java.net.URI;

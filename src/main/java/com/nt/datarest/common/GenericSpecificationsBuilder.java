@@ -1,4 +1,4 @@
-package com.example.demo.advancedsearch;
+package com.nt.datarest.common;
 
 import java.util.ArrayList;
 import java.util.Collections;

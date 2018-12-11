@@ -1,4 +1,4 @@
-package com.example.demo.advancedsearch;
+package com.nt.datarest.common;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -17,11 +17,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.ApplicationRepository;
-import com.example.demo.EmployeeProjection;
-import com.example.demo.employee.EmplRepo;
-import com.example.demo.model.Department;
-import com.example.demo.model.Employee;
+import com.nt.datarest.model.Department;
+import com.nt.datarest.model.Employee;
+import com.nt.datarest.projections.EmployeeProjection;
+import com.nt.datarest.repository.EmplRepo;
 @CrossOrigin()
 @EnableSpringDataWebSupport
 @RestController

@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.nt.datarest.common;
 
 import org.springframework.data.domain.Page;
 

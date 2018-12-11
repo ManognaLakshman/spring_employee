@@ -1,4 +1,4 @@
-package com.example.demo.model;
+package com.nt.datarest;
 import com.google.common.collect.Lists;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
