@@ -19,7 +19,8 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.data.rest.core.annotation.RestResource;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
-import com.example.demo.InlineRecords2;
+import com.example.demo.ApplicationRepository;
+import com.example.demo.EmployeeProjection;
 import com.example.demo.model.Department;
 import com.example.demo.model.Employee;
 import com.example.demo.model.QEmployee;
@@ -32,50 +33,50 @@ import io.swagger.annotations.Api;
 
 @CrossOrigin()
 @Api(tags = "Employee Entity")
-@RepositoryRestResource(collectionResourceRel="employees",path="employees",excerptProjection = InlineRecords2.class)
-public interface EmplRepo extends JpaRepository<Employee, Integer>{
+@RepositoryRestResource(collectionResourceRel="employees",path="employees",excerptProjection = EmployeeProjection.class)
+public interface EmplRepo extends ApplicationRepository<Employee, Integer>{//JpaRepository<Employee, Integer>{
 
-	@RestResource
-	Page<Employee> findAll(Specification spec,Pageable pageable);
+//	@RestResource
+//	Page<Employee> findAll(Specification spec,Pageable pageable);
+////	
+//	@RestResource(path = "byempid", rel = "byempid")
+//    Page<Employee> findAllByempid(@Param("empid") Integer empid,Pageable pageable);
 //	
-	@RestResource(path = "byempid", rel = "byempid")
-    Page<Employee> findAllByempid(@Param("empid") Integer empid,Pageable pageable);
-	
-	
-	@RestResource(path = "byempname", rel = "byempame")
-    Page<Employee> findAllByempnameContaining(@Param("empname") String empname,Pageable pageable);
-	
-	@RestResource(path = "byskill", rel = "byskill")
-    Page<Employee> findByskillContaining(@Param("skill") String skill,Pageable pageable);
-	
-	@RestResource(path = "bydeptid", rel = "bydeptid")
-	List<Employee> findBydeptid(@Param("deptid") Department deptid);//findAllBydeptDeptname 
-	
-	@RestResource(path = "bydesignation", rel = "bydesignation")
-    Page<Employee> findAllBydesignationContaining(@Param("designation") String desigation,Pageable pageable);
-	
-	@RestResource(path = "bydoj", rel = "bydoj")
-    List<Employee> findAllBydoj(@Param("doj")Date doj);
-//	List<Employee> findAllByOrderBydojAsc();
-//	List<Employee> findAllByOrderBydojDesc();
-	
-	
-	
-	@RestResource(path = "bysalary", rel = "bysalary")
-    Page<Employee> findAllBysalary(@Param("salary") float salary,Pageable pageable);
-//	//
-	
-	
-	@RestResource(path = "bygrade", rel = "bygrade")
-    Page<Employee> findAllBygrade(@Param("grade") Integer grade,Pageable pageable);
-	
-	
-	@RestResource(path = "bycity", rel = "bycity")
-    Page<Employee> findAllBycityContaining(@Param("city") String city,Pageable pageable);
-	
-	
-	@RestResource(path = "bycountry", rel = "bycountry")
-    Page<Employee> findAllBycountryContaining(@Param("country") String country,Pageable pageable);
+//	
+//	@RestResource(path = "byempname", rel = "byempame")
+//    Page<Employee> findAllByempnameContaining(@Param("empname") String empname,Pageable pageable);
+//	
+//	@RestResource(path = "byskill", rel = "byskill")
+//    Page<Employee> findByskillContaining(@Param("skill") String skill,Pageable pageable);
+//	
+//	@RestResource(path = "bydeptid", rel = "bydeptid")
+//	List<Employee> findBydeptid(@Param("deptid") Department deptid);//findAllBydeptDeptname 
+//	
+//	@RestResource(path = "bydesignation", rel = "bydesignation")
+//    Page<Employee> findAllBydesignationContaining(@Param("designation") String desigation,Pageable pageable);
+//	
+//	@RestResource(path = "bydoj", rel = "bydoj")
+//    List<Employee> findAllBydoj(@Param("doj")Date doj);
+////	List<Employee> findAllByOrderBydojAsc();
+////	List<Employee> findAllByOrderBydojDesc();
+//	
+//	
+//	
+//	@RestResource(path = "bysalary", rel = "bysalary")
+//    Page<Employee> findAllBysalary(@Param("salary") float salary,Pageable pageable);
+////	//
+//	
+//	
+//	@RestResource(path = "bygrade", rel = "bygrade")
+//    Page<Employee> findAllBygrade(@Param("grade") Integer grade,Pageable pageable);
+//	
+//	
+//	@RestResource(path = "bycity", rel = "bycity")
+//    Page<Employee> findAllBycityContaining(@Param("city") String city,Pageable pageable);
+//	
+//	
+//	@RestResource(path = "bycountry", rel = "bycountry")
+//    Page<Employee> findAllBycountryContaining(@Param("country") String country,Pageable pageable);
 
 	
 	

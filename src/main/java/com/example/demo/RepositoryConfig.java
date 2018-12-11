@@ -11,11 +11,11 @@ public class RepositoryConfig extends RepositoryRestConfigurerAdapter {
 
   @Override
   public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config) {
-    config.getProjectionConfiguration().addProjection(InlineRecords.class);
+    config.getProjectionConfiguration().addProjection(DepartmentProjection.class);
     
-    config.getProjectionConfiguration().addProjection(InlineRecords2.class);
+    config.getProjectionConfiguration().addProjection(EmployeeProjection.class);
 
-    config.getProjectionConfiguration().addProjection(InlineRecords3.class);
+    config.getProjectionConfiguration().addProjection(EmployeeProjection2.class);
     
     //
     config.setDefaultMediaType(MediaType.APPLICATION_JSON);

@@ -1,6 +1,7 @@
-package com.example.demo.department;
+package com.example.demo.advancedsearch;
 
 import java.util.List;
+
 
 
 
@@ -25,9 +26,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.InlineRecords;
-import com.example.demo.advancedsearch.CriteriaParser;
-import com.example.demo.advancedsearch.GenericSpecificationsBuilder;
+import com.example.demo.ApplicationRepository;
+import com.example.demo.DepartmentProjection;
+import com.example.demo.department.DeptRepo;
 import com.example.demo.model.Department;
 import com.querydsl.core.types.Predicate;
 
@@ -38,7 +39,12 @@ import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
 @EnableSpringDataWebSupport
 @RestController
 
-public class DepartmentController {
+public class DepartmentController extends GenericController<Department,Integer>{
+
+	public DepartmentController(ApplicationRepository<Department, Integer> repo) {
+		super(repo);
+		// TODO Auto-generated constructor stub
+	}
 
 	@Autowired
     private DeptRepo deptrepo;
@@ -46,21 +52,26 @@ public class DepartmentController {
 	@Autowired
 	private ProjectionFactory factory;
 	@Autowired
-	private PagedResourcesAssembler<InlineRecords> assembler;
+	private PagedResourcesAssembler<DepartmentProjection> assembler;
+	
+//	@Autowired
+//	public DepartmentController(ApplicationRepository<Department, Integer> repo) {
+//		super(repo);
+//	}
 
-    protected Specification<Department> resolveSpecificationFromInfixExpr(String searchParameters) {
-        CriteriaParser parser = new CriteriaParser();
-        GenericSpecificationsBuilder<Department> specBuilder = new GenericSpecificationsBuilder<>();
-        return specBuilder.build(parser.parse(searchParameters), DepartmentSpecification::new);
-    }
+//    protected Specification<Department> resolveSpecificationFromInfixExpr(String searchParameters) {
+//        CriteriaParser parser = new CriteriaParser();
+//        GenericSpecificationsBuilder<Department> specBuilder = new GenericSpecificationsBuilder<>();
+//        return specBuilder.build(parser.parse(searchParameters), BaseGenericSpecification::new);
+//    }
     
     @GetMapping(value = "/departments/search/byadvsearch",produces = "application/json")//remove "produces" key
     @ResponseBody
     public ResponseEntity<?> findAllByAdvPredicate(@RequestParam(value = "advsearch") String search,Pageable pageable){
         Specification<Department> spec = resolveSpecificationFromInfixExpr(search);
         Page<Department> emplo= deptrepo.findAll(spec, pageable);
-        Page<InlineRecords> projected = emplo.map(l -> factory.createProjection(InlineRecords.class, l));
-        PagedResources<Resource<InlineRecords>> resources = assembler.toResource(projected);
+        Page<DepartmentProjection> projected = emplo.map(l -> factory.createProjection(DepartmentProjection.class, l));
+        PagedResources<Resource<DepartmentProjection>> resources = assembler.toResource(projected);
         return ResponseEntity.ok(resources);
        
 	}

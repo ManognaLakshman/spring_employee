@@ -12,12 +12,12 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication
 @EnableSwagger2
-public class AppApplication {
+public class GenericDataRestApplication {
 	
-	private static final Logger LOGGER = LoggerFactory.getLogger(AppApplication.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(GenericDataRestApplication.class);
 	
 	public static void main(String[] args) {
-		SpringApplication.run(AppApplication.class, args);
+		SpringApplication.run(GenericDataRestApplication.class, args);
 		
 		LOGGER.error("Message logged at ERROR level");
 		LOGGER.warn("Message logged at WARN level");

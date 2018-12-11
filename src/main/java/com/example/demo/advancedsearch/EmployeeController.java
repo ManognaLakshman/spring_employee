@@ -1,6 +1,7 @@
-package com.example.demo.employee;
+package com.example.demo.advancedsearch;
 
 import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
@@ -16,15 +17,21 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.InlineRecords2;
-import com.example.demo.advancedsearch.CriteriaParser;
-import com.example.demo.advancedsearch.GenericSpecificationsBuilder;
+import com.example.demo.ApplicationRepository;
+import com.example.demo.EmployeeProjection;
+import com.example.demo.employee.EmplRepo;
+import com.example.demo.model.Department;
 import com.example.demo.model.Employee;
 @CrossOrigin()
 @EnableSpringDataWebSupport
 @RestController
 
-public class EmployeeController{
+public class EmployeeController extends GenericController<Employee,Integer>{
+
+	public EmployeeController(ApplicationRepository<Employee, Integer> repo) {
+		super(repo);
+		// TODO Auto-generated constructor stub
+	}
 
 	@Autowired
     private EmplRepo emplrepo;
@@ -33,13 +40,13 @@ public class EmployeeController{
 	@Autowired
 	private ProjectionFactory factory;
 	@Autowired
-	private PagedResourcesAssembler<InlineRecords2> assembler;
+	private PagedResourcesAssembler<EmployeeProjection> assembler;
 
 	
     protected Specification<Employee> resolveSpecificationFromInfixExpr(String searchParameters) {
         CriteriaParser parser = new CriteriaParser();
         GenericSpecificationsBuilder<Employee> specBuilder = new GenericSpecificationsBuilder<>();
-        return specBuilder.build(parser.parse(searchParameters), EmployeeSpecification::new);
+        return specBuilder.build(parser.parse(searchParameters), BaseGenericSpecification::new);
     }
     
     @GetMapping(value = "/employees/search/byadvsearch",produces = "application/json")//remove "produces" key
@@ -47,8 +54,8 @@ public class EmployeeController{
     public ResponseEntity<?> findAllByAdvPredicate(@RequestParam(value = "advsearch") String search,Pageable pageable){
         Specification<Employee> spec = resolveSpecificationFromInfixExpr(search);
         Page<Employee> emplo= emplrepo.findAll(spec, pageable);
-        Page<InlineRecords2> projected = emplo.map(l -> factory.createProjection(InlineRecords2.class, l));
-        PagedResources<Resource<InlineRecords2>> resources = assembler.toResource(projected);
+        Page<EmployeeProjection> projected = emplo.map(l -> factory.createProjection(EmployeeProjection.class, l));
+        PagedResources<Resource<EmployeeProjection>> resources = assembler.toResource(projected);
         return ResponseEntity.ok(resources);
        
 	}
