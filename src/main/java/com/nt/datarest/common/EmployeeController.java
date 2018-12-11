@@ -42,11 +42,11 @@ public class EmployeeController extends GenericController<Employee,Integer>{
 	private PagedResourcesAssembler<EmployeeProjection> assembler;
 
 	
-    protected Specification<Employee> resolveSpecificationFromInfixExpr(String searchParameters) {
-        CriteriaParser parser = new CriteriaParser();
-        GenericSpecificationsBuilder<Employee> specBuilder = new GenericSpecificationsBuilder<>();
-        return specBuilder.build(parser.parse(searchParameters), BaseGenericSpecification::new);
-    }
+//    protected Specification<Employee> resolveSpecificationFromInfixExpr(String searchParameters) {
+//        CriteriaParser parser = new CriteriaParser();
+//        GenericSpecificationsBuilder<Employee> specBuilder = new GenericSpecificationsBuilder<>();
+//        return specBuilder.build(parser.parse(searchParameters), BaseGenericSpecification::new);
+//    }
     
     @GetMapping(value = "/employees/search/byadvsearch",produces = "application/json")//remove "produces" key
     @ResponseBody
