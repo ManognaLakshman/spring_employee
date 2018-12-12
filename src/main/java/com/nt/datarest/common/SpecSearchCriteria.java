@@ -32,7 +32,12 @@ public class SpecSearchCriteria {
             if (op == SearchOperation.EQUALITY) { // the operation may be complex operation
                 final boolean startWithAsterisk = prefix != null && prefix.contains(SearchOperation.ZERO_OR_MORE_REGEX);
                 final boolean endWithAsterisk = suffix != null && suffix.contains(SearchOperation.ZERO_OR_MORE_REGEX);
-
+//
+//                final boolean startWithSquare = prefix != null && prefix.contains(SearchOperation.left_square);
+//                final boolean endWithSquare = prefix != null && prefix.contains(SearchOperation.right_square);
+//                if (startWithSquare && endWithSquare) 
+//                    op = SearchOperation.CONTAINS;
+//
                 if (startWithAsterisk && endWithAsterisk) {
                     op = SearchOperation.CONTAINS;
                 } else if (startWithAsterisk) {
@@ -40,6 +45,8 @@ public class SpecSearchCriteria {
                 } else if (endWithAsterisk) {
                     op = SearchOperation.STARTS_WITH;
                 }
+                
+                
             }
         }
         this.key = key;

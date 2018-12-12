@@ -34,14 +34,14 @@ public class Employee implements Serializable{
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO, generator="my_seq_gen")
 	@SequenceGenerator(name="my_seq_gen", sequenceName="id_seq",allocationSize=1)
-	private int empid;	
+	private int id;	
 	
-	private String empname;
+	private String name;
 	
 	@ManyToOne(fetch = FetchType.EAGER,cascade=CascadeType.ALL)
 	@JoinColumn(name="deptid")
 //	@JsonUnwrapped
-	private Department deptid;
+	private Department dept;
 	
 	private String skill;
 	private float salary;
@@ -52,15 +52,15 @@ public class Employee implements Serializable{
 //	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd@HH:mm:ss.SSSZ")
 	@Temporal(TemporalType.DATE)
 	private Date doj;
-	private String designation;//total 10 attributes
+	private String desg;//total 10 attributes
 	
 	
 	/////deptid setter and getter
 	public Department getDeptid() {
-		return deptid;
+		return dept;
 	}
-	public void setDeptid(Department deptid) {
-		this.deptid = deptid;
+	public void setDept(Department dept) {
+		this.dept = dept;
 	}
 	
 	
@@ -94,18 +94,18 @@ public class Employee implements Serializable{
 		this.salary = salary;
 	}
 	
-	public int getEmpid() {
-		return empid;
+	public int getId() {
+		return id;
 	}
-	public void setEmpid(int empid) {
-		this.empid = empid;
+	public void setId(int id) {
+		this.id = id;
 	}
 	//----------
-	public String getEmpname() {
-		return empname;
+	public String getName() {
+		return name;
 	}
-	public void setEmpname(String empname) {
-		this.empname = empname;
+	public void setName(String name) {
+		this.name = name;
 	}
 	
 	public String getSkill() {
@@ -122,11 +122,11 @@ public class Employee implements Serializable{
 		this.doj = doj;
 	}
 	
-	public String getDesignation() {
-		return designation;
+	public String getDesg() {
+		return desg;
 	}
-	public void setDesignation(String designation) {
-		this.designation = designation;
+	public void setDesg(String desg) {
+		this.desg = desg;
 	}
 	
 	

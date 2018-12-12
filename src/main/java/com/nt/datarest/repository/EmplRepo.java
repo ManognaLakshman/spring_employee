@@ -40,21 +40,21 @@ public interface EmplRepo extends ApplicationRepository<Employee, Integer>{//Jpa
 //	@RestResource
 //	Page<Employee> findAll(Specification spec,Pageable pageable);
 ////	
-//	@RestResource(path = "byempid", rel = "byempid")
-//    Page<Employee> findAllByempid(@Param("empid") Integer empid,Pageable pageable);
+//	@RestResource(path = "byid", rel = "byid")
+//    Page<Employee> findAllByid(@Param("id") Integer id,Pageable pageable);
 //	
 //	
-//	@RestResource(path = "byempname", rel = "byempame")
-//    Page<Employee> findAllByempnameContaining(@Param("empname") String empname,Pageable pageable);
+//	@RestResource(path = "byname", rel = "byname")
+//    Page<Employee> findAllBynameContaining(@Param("name") String name,Pageable pageable);
 //	
 //	@RestResource(path = "byskill", rel = "byskill")
 //    Page<Employee> findByskillContaining(@Param("skill") String skill,Pageable pageable);
 //	
-//	@RestResource(path = "bydeptid", rel = "bydeptid")
-//	List<Employee> findBydeptid(@Param("deptid") Department deptid);//findAllBydeptDeptname 
+//	@RestResource(path = "bydept", rel = "bydept")
+//	List<Employee> findBydept(@Param("dept") Department dept);//findAllBydeptDeptname 
 //	
-//	@RestResource(path = "bydesignation", rel = "bydesignation")
-//    Page<Employee> findAllBydesignationContaining(@Param("designation") String desigation,Pageable pageable);
+//	@RestResource(path = "bydesg", rel = "bydesg")
+//    Page<Employee> findAllBydesgContaining(@Param("desg") String desg,Pageable pageable);
 //	
 //	@RestResource(path = "bydoj", rel = "bydoj")
 //    List<Employee> findAllBydoj(@Param("doj")Date doj);
@@ -88,8 +88,8 @@ public interface EmplRepo extends ApplicationRepository<Employee, Integer>{//Jpa
 	
 	//testing delete by
 //	@Transactional
-//	@RestResource(path = "deletebyempname", rel = "deletebyempname")
-//    List<Employee> deleteByempnameContaining(@Param("name") String empname);
+//	@RestResource(path = "deletebyname", rel = "deletebyname")
+//    List<Employee> deleteBynameContaining(@Param("name") String name);
 	//
 	
 	

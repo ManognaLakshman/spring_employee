@@ -62,7 +62,6 @@ public class EmployeeController extends GenericController<Employee,Integer>{
         Page<EmployeeProjection> projected = emplo.map(l -> factory.createProjection(EmployeeProjection.class, l));
         PagedResources<Resource<EmployeeProjection>> resources = assembler.toResource(projected);
         return ResponseEntity.ok(resources);
-       
 	}
     
     
