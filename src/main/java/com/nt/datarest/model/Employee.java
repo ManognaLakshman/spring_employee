@@ -56,7 +56,7 @@ public class Employee implements Serializable{
 	
 	
 	/////dept setter and getter
-	public Department getDeptid() {
+	public Department getDept() {
 		return dept;
 	}
 	public void setDept(Department dept) {

@@ -2694,3 +2694,371 @@ java.lang.IllegalArgumentException: Unable to locate Attribute  with the the giv
 2018-12-12 17:01:11 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2018-12-12 17:01:11 [RMI TCP Connection(2)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown initiated...
 2018-12-12 17:01:11 [RMI TCP Connection(2)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown completed.
+2018-12-12 18:42:59 [restartedMain] INFO  c.n.d.GenericDataRestApplication - Starting GenericDataRestApplication on Srikeshs-MacBook-Pro.local with PID 42700 (/Users/srikeshnagoji/Documents/javaworkspace/app/target/classes started by srikeshnagoji in /Users/srikeshnagoji/Documents/javaworkspace/app)
+2018-12-12 18:42:59 [restartedMain] INFO  c.n.d.GenericDataRestApplication - No active profile set, falling back to default profiles: default
+2018-12-12 18:43:25 [restartedMain] INFO  c.n.d.GenericDataRestApplication - Starting GenericDataRestApplication on Srikeshs-MacBook-Pro.local with PID 42706 (/Users/srikeshnagoji/Documents/javaworkspace/app/target/classes started by srikeshnagoji in /Users/srikeshnagoji/Documents/javaworkspace/app)
+2018-12-12 18:43:25 [restartedMain] INFO  c.n.d.GenericDataRestApplication - No active profile set, falling back to default profiles: default
+2018-12-12 18:43:25 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2018-12-12 18:43:25 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2018-12-12 18:43:27 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2018-12-12 18:43:27 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 99ms. Found 2 repository interfaces.
+2018-12-12 18:43:28 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ef85f5a7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-12-12 18:43:28 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$6f0642d9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-12-12 18:43:28 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2018-12-12 18:43:28 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2018-12-12 18:43:28 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.12
+2018-12-12 18:43:28 [restartedMain] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/Users/srikeshnagoji/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+2018-12-12 18:43:29 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-12-12 18:43:29 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3231 ms
+2018-12-12 18:43:29 [restartedMain] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+2018-12-12 18:43:29 [restartedMain] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet webServlet mapped to [/h2-console/*]
+2018-12-12 18:43:29 [restartedMain] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-12 18:43:29 [restartedMain] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-12 18:43:29 [restartedMain] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'formContentFilter' to: [/*]
+2018-12-12 18:43:29 [restartedMain] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-12 18:43:29 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2018-12-12 18:43:29 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2018-12-12 18:43:29 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-12-12 18:43:29 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.7.Final}
+2018-12-12 18:43:29 [restartedMain] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2018-12-12 18:43:30 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2018-12-12 18:43:30 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-12-12 18:43:31 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-12-12 18:43:31 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2018-12-12 18:43:32 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2018-12-12 18:43:32 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2018-12-12 18:43:33 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2018-12-12 18:43:34 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2018-12-12 18:43:34 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2018-12-12 18:43:34 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2018-12-12 18:43:34 [restartedMain] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: findAllByAdvPredicateUsingGET_1
+2018-12-12 18:43:35 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2018-12-12 18:43:35 [restartedMain] INFO  c.n.d.GenericDataRestApplication - Started GenericDataRestApplication in 9.733 seconds (JVM running for 10.803)
+2018-12-12 18:43:35 [restartedMain] ERROR c.n.d.GenericDataRestApplication - Message logged at ERROR level
+2018-12-12 18:43:35 [restartedMain] WARN  c.n.d.GenericDataRestApplication - Message logged at WARN level
+2018-12-12 18:43:35 [restartedMain] INFO  c.n.d.GenericDataRestApplication - Message logged at INFO level
+2018-12-12 18:43:44 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2018-12-12 18:43:44 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2018-12-12 18:43:44 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 18 ms
+2018-12-12 18:43:44 [http-nio-8080-exec-2] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2018-12-12 18:43:44 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select department0_.deptid as deptid1_0_, department0_.deptheadid as depthead3_0_, department0_.deptname as deptname2_0_ from department department0_ limit ?
+2018-12-12 18:43:44 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select employee0_.id as id1_1_0_, employee0_.city as city2_1_0_, employee0_.country as country3_1_0_, employee0_.deptid as deptid10_1_0_, employee0_.desg as desg4_1_0_, employee0_.doj as doj5_1_0_, employee0_.grade as grade6_1_0_, employee0_.name as name7_1_0_, employee0_.salary as salary8_1_0_, employee0_.skill as skill9_1_0_, department1_.deptid as deptid1_0_1_, department1_.deptheadid as depthead3_0_1_, department1_.deptname as deptname2_0_1_, employee2_.id as id1_1_2_, employee2_.city as city2_1_2_, employee2_.country as country3_1_2_, employee2_.deptid as deptid10_1_2_, employee2_.desg as desg4_1_2_, employee2_.doj as doj5_1_2_, employee2_.grade as grade6_1_2_, employee2_.name as name7_1_2_, employee2_.salary as salary8_1_2_, employee2_.skill as skill9_1_2_ from employee employee0_ left outer join department department1_ on employee0_.deptid=department1_.deptid left outer join employee employee2_ on department1_.deptheadid=employee2_.id where employee0_.id=?
+2018-12-12 18:43:44 [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [1]
+2018-12-12 18:43:44 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select employee0_.id as id1_1_0_, employee0_.city as city2_1_0_, employee0_.country as country3_1_0_, employee0_.deptid as deptid10_1_0_, employee0_.desg as desg4_1_0_, employee0_.doj as doj5_1_0_, employee0_.grade as grade6_1_0_, employee0_.name as name7_1_0_, employee0_.salary as salary8_1_0_, employee0_.skill as skill9_1_0_, department1_.deptid as deptid1_0_1_, department1_.deptheadid as depthead3_0_1_, department1_.deptname as deptname2_0_1_, employee2_.id as id1_1_2_, employee2_.city as city2_1_2_, employee2_.country as country3_1_2_, employee2_.deptid as deptid10_1_2_, employee2_.desg as desg4_1_2_, employee2_.doj as doj5_1_2_, employee2_.grade as grade6_1_2_, employee2_.name as name7_1_2_, employee2_.salary as salary8_1_2_, employee2_.skill as skill9_1_2_ from employee employee0_ left outer join department department1_ on employee0_.deptid=department1_.deptid left outer join employee employee2_ on department1_.deptheadid=employee2_.id where employee0_.id=?
+2018-12-12 18:43:44 [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [5]
+2018-12-12 18:43:49 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select employee0_.id as id1_1_, employee0_.city as city2_1_, employee0_.country as country3_1_, employee0_.deptid as deptid10_1_, employee0_.desg as desg4_1_, employee0_.doj as doj5_1_, employee0_.grade as grade6_1_, employee0_.name as name7_1_, employee0_.salary as salary8_1_, employee0_.skill as skill9_1_ from employee employee0_ limit ?
+2018-12-12 18:43:55 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select employee0_.id as id1_1_, employee0_.city as city2_1_, employee0_.country as country3_1_, employee0_.deptid as deptid10_1_, employee0_.desg as desg4_1_, employee0_.doj as doj5_1_, employee0_.grade as grade6_1_, employee0_.name as name7_1_, employee0_.salary as salary8_1_, employee0_.skill as skill9_1_ from employee employee0_ where (employee0_.desg like ?) and (employee0_.country=? or employee0_.city=? or employee0_.name=?) order by employee0_.name desc limit ?
+2018-12-12 18:43:55 [http-nio-8080-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [%per]
+2018-12-12 18:43:55 [http-nio-8080-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [india]
+2018-12-12 18:43:55 [http-nio-8080-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [florida]
+2018-12-12 18:43:55 [http-nio-8080-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [thor]
+2018-12-12 18:44:01 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select department0_.deptid as deptid1_0_, department0_.deptheadid as depthead3_0_, department0_.deptname as deptname2_0_ from department department0_ where department0_.deptname=? limit ?
+2018-12-12 18:44:01 [http-nio-8080-exec-5] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [grm]
+2018-12-12 18:44:01 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select employee0_.id as id1_1_0_, employee0_.city as city2_1_0_, employee0_.country as country3_1_0_, employee0_.deptid as deptid10_1_0_, employee0_.desg as desg4_1_0_, employee0_.doj as doj5_1_0_, employee0_.grade as grade6_1_0_, employee0_.name as name7_1_0_, employee0_.salary as salary8_1_0_, employee0_.skill as skill9_1_0_, department1_.deptid as deptid1_0_1_, department1_.deptheadid as depthead3_0_1_, department1_.deptname as deptname2_0_1_, employee2_.id as id1_1_2_, employee2_.city as city2_1_2_, employee2_.country as country3_1_2_, employee2_.deptid as deptid10_1_2_, employee2_.desg as desg4_1_2_, employee2_.doj as doj5_1_2_, employee2_.grade as grade6_1_2_, employee2_.name as name7_1_2_, employee2_.salary as salary8_1_2_, employee2_.skill as skill9_1_2_ from employee employee0_ left outer join department department1_ on employee0_.deptid=department1_.deptid left outer join employee employee2_ on department1_.deptheadid=employee2_.id where employee0_.id=?
+2018-12-12 18:44:01 [http-nio-8080-exec-5] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [1]
+2018-12-12 18:44:06 [http-nio-8080-exec-6] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.InvalidDataAccessApiUsageException: Unable to locate Attribute  with the the given name [empname] on this ManagedType [com.nt.datarest.model.Employee]; nested exception is java.lang.IllegalArgumentException: Unable to locate Attribute  with the the given name [empname] on this ManagedType [com.nt.datarest.model.Employee]] with root cause
+java.lang.IllegalArgumentException: Unable to locate Attribute  with the the given name [empname] on this ManagedType [com.nt.datarest.model.Employee]
+	at org.hibernate.metamodel.internal.AbstractManagedType.checkNotNull(AbstractManagedType.java:128)
+	at org.hibernate.metamodel.internal.AbstractManagedType.getAttribute(AbstractManagedType.java:113)
+	at org.hibernate.query.criteria.internal.path.AbstractFromImpl.locateAttributeInternal(AbstractFromImpl.java:111)
+	at org.hibernate.query.criteria.internal.path.AbstractPathImpl.locateAttribute(AbstractPathImpl.java:204)
+	at org.hibernate.query.criteria.internal.path.AbstractPathImpl.get(AbstractPathImpl.java:177)
+	at com.nt.datarest.common.BaseGenericSpecification.getPath(BaseGenericSpecification.java:71)
+	at com.nt.datarest.common.BaseGenericSpecification.toPredicate(BaseGenericSpecification.java:81)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.applySpecificationToCriteria(SimpleJpaRepository.java:694)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.getQuery(SimpleJpaRepository.java:625)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.getQuery(SimpleJpaRepository.java:583)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll(SimpleJpaRepository.java:386)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:359)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:200)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:644)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:608)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lambda$invoke$3(RepositoryFactorySupport.java:595)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:595)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:59)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:135)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.repository.core.support.SurroundingTransactionDetectorMethodInterceptor.invoke(SurroundingTransactionDetectorMethodInterceptor.java:61)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy121.findAll(Unknown Source)
+	at com.nt.datarest.common.EmployeeController.findAllByAdvPredicate(EmployeeController.java:57)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:215)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:142)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:890)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2018-12-12 18:44:14 [http-nio-8080-exec-7] DEBUG org.hibernate.SQL - select employee0_.id as id1_1_, employee0_.city as city2_1_, employee0_.country as country3_1_, employee0_.deptid as deptid10_1_, employee0_.desg as desg4_1_, employee0_.doj as doj5_1_, employee0_.grade as grade6_1_, employee0_.name as name7_1_, employee0_.salary as salary8_1_, employee0_.skill as skill9_1_ from employee employee0_ where employee0_.name=? limit ?
+2018-12-12 18:44:14 [http-nio-8080-exec-7] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [mike]
+2018-12-12 18:44:17 [http-nio-8080-exec-9] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.InvalidDataAccessApiUsageException: Unable to locate Attribute  with the the given name [deptid] on this ManagedType [com.nt.datarest.model.Employee]; nested exception is java.lang.IllegalArgumentException: Unable to locate Attribute  with the the given name [deptid] on this ManagedType [com.nt.datarest.model.Employee]] with root cause
+java.lang.IllegalArgumentException: Unable to locate Attribute  with the the given name [deptid] on this ManagedType [com.nt.datarest.model.Employee]
+	at org.hibernate.metamodel.internal.AbstractManagedType.checkNotNull(AbstractManagedType.java:128)
+	at org.hibernate.metamodel.internal.AbstractManagedType.getAttribute(AbstractManagedType.java:113)
+	at org.hibernate.query.criteria.internal.path.AbstractFromImpl.locateAttributeInternal(AbstractFromImpl.java:111)
+	at org.hibernate.query.criteria.internal.path.AbstractPathImpl.locateAttribute(AbstractPathImpl.java:204)
+	at org.hibernate.query.criteria.internal.path.AbstractPathImpl.get(AbstractPathImpl.java:177)
+	at com.nt.datarest.common.BaseGenericSpecification.getPath(BaseGenericSpecification.java:71)
+	at com.nt.datarest.common.BaseGenericSpecification.toPredicate(BaseGenericSpecification.java:81)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.applySpecificationToCriteria(SimpleJpaRepository.java:694)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.getQuery(SimpleJpaRepository.java:625)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.getQuery(SimpleJpaRepository.java:583)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.findAll(SimpleJpaRepository.java:386)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:359)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:200)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:644)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:608)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lambda$invoke$3(RepositoryFactorySupport.java:595)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:595)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:59)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:135)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.repository.core.support.SurroundingTransactionDetectorMethodInterceptor.invoke(SurroundingTransactionDetectorMethodInterceptor.java:61)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy121.findAll(Unknown Source)
+	at com.nt.datarest.common.EmployeeController.findAllByAdvPredicate(EmployeeController.java:57)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:215)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:142)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:890)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2018-12-12 18:44:23 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select employee0_.id as id1_1_, employee0_.city as city2_1_, employee0_.country as country3_1_, employee0_.deptid as deptid10_1_, employee0_.desg as desg4_1_, employee0_.doj as doj5_1_, employee0_.grade as grade6_1_, employee0_.name as name7_1_, employee0_.salary as salary8_1_, employee0_.skill as skill9_1_ from employee employee0_ cross join department department1_ where employee0_.deptid=department1_.deptid and department1_.deptname=? limit ?
+2018-12-12 18:44:23 [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [grm]
+2018-12-12 18:44:51 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select employee0_.id as id1_1_, employee0_.city as city2_1_, employee0_.country as country3_1_, employee0_.deptid as deptid10_1_, employee0_.desg as desg4_1_, employee0_.doj as doj5_1_, employee0_.grade as grade6_1_, employee0_.name as name7_1_, employee0_.salary as salary8_1_, employee0_.skill as skill9_1_ from employee employee0_ cross join department department1_ where employee0_.deptid=department1_.deptid and department1_.deptname=? limit ?
+2018-12-12 18:44:51 [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [grm]
+2018-12-12 18:45:05 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select employee0_.id as id1_1_, employee0_.city as city2_1_, employee0_.country as country3_1_, employee0_.deptid as deptid10_1_, employee0_.desg as desg4_1_, employee0_.doj as doj5_1_, employee0_.grade as grade6_1_, employee0_.name as name7_1_, employee0_.salary as salary8_1_, employee0_.skill as skill9_1_ from employee employee0_ where employee0_.name=? limit ?
+2018-12-12 18:45:05 [http-nio-8080-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [mike]
+2018-12-12 18:45:09 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select department0_.deptid as deptid1_0_, department0_.deptheadid as depthead3_0_, department0_.deptname as deptname2_0_ from department department0_ where department0_.deptname=? limit ?
+2018-12-12 18:45:09 [http-nio-8080-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [grm]
+2018-12-12 18:45:09 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select employee0_.id as id1_1_0_, employee0_.city as city2_1_0_, employee0_.country as country3_1_0_, employee0_.deptid as deptid10_1_0_, employee0_.desg as desg4_1_0_, employee0_.doj as doj5_1_0_, employee0_.grade as grade6_1_0_, employee0_.name as name7_1_0_, employee0_.salary as salary8_1_0_, employee0_.skill as skill9_1_0_, department1_.deptid as deptid1_0_1_, department1_.deptheadid as depthead3_0_1_, department1_.deptname as deptname2_0_1_, employee2_.id as id1_1_2_, employee2_.city as city2_1_2_, employee2_.country as country3_1_2_, employee2_.deptid as deptid10_1_2_, employee2_.desg as desg4_1_2_, employee2_.doj as doj5_1_2_, employee2_.grade as grade6_1_2_, employee2_.name as name7_1_2_, employee2_.salary as salary8_1_2_, employee2_.skill as skill9_1_2_ from employee employee0_ left outer join department department1_ on employee0_.deptid=department1_.deptid left outer join employee employee2_ on department1_.deptheadid=employee2_.id where employee0_.id=?
+2018-12-12 18:45:09 [http-nio-8080-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [1]
+2018-12-12 18:45:19 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select employee0_.id as id1_1_, employee0_.city as city2_1_, employee0_.country as country3_1_, employee0_.deptid as deptid10_1_, employee0_.desg as desg4_1_, employee0_.doj as doj5_1_, employee0_.grade as grade6_1_, employee0_.name as name7_1_, employee0_.salary as salary8_1_, employee0_.skill as skill9_1_ from employee employee0_ where (employee0_.desg like ?) and (employee0_.country=? or employee0_.city=? or employee0_.name=?) order by employee0_.name desc limit ?
+2018-12-12 18:45:19 [http-nio-8080-exec-5] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [%per]
+2018-12-12 18:45:19 [http-nio-8080-exec-5] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [india]
+2018-12-12 18:45:19 [http-nio-8080-exec-5] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [VARCHAR] - [florida]
+2018-12-12 18:45:19 [http-nio-8080-exec-5] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [thor]
+2018-12-12 18:45:47 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select employee0_.id as id1_1_, employee0_.city as city2_1_, employee0_.country as country3_1_, employee0_.deptid as deptid10_1_, employee0_.desg as desg4_1_, employee0_.doj as doj5_1_, employee0_.grade as grade6_1_, employee0_.name as name7_1_, employee0_.salary as salary8_1_, employee0_.skill as skill9_1_ from employee employee0_ cross join department department1_ where employee0_.deptid=department1_.deptid and department1_.deptname=? limit ?
+2018-12-12 18:45:47 [http-nio-8080-exec-6] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [grm]
+2018-12-12 18:47:21 [http-nio-8080-exec-9] DEBUG org.hibernate.SQL - select employee0_.id as id1_1_, employee0_.city as city2_1_, employee0_.country as country3_1_, employee0_.deptid as deptid10_1_, employee0_.desg as desg4_1_, employee0_.doj as doj5_1_, employee0_.grade as grade6_1_, employee0_.name as name7_1_, employee0_.salary as salary8_1_, employee0_.skill as skill9_1_ from employee employee0_ cross join department department1_ where employee0_.deptid=department1_.deptid and department1_.deptname=? limit ?
+2018-12-12 18:47:21 [http-nio-8080-exec-9] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [grm]
+2018-12-12 18:47:29 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select employee0_.id as id1_1_, employee0_.city as city2_1_, employee0_.country as country3_1_, employee0_.deptid as deptid10_1_, employee0_.desg as desg4_1_, employee0_.doj as doj5_1_, employee0_.grade as grade6_1_, employee0_.name as name7_1_, employee0_.salary as salary8_1_, employee0_.skill as skill9_1_ from employee employee0_ where employee0_.deptid=1 limit ?
+2018-12-12 18:47:35 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select employee0_.id as id1_1_, employee0_.city as city2_1_, employee0_.country as country3_1_, employee0_.deptid as deptid10_1_, employee0_.desg as desg4_1_, employee0_.doj as doj5_1_, employee0_.grade as grade6_1_, employee0_.name as name7_1_, employee0_.salary as salary8_1_, employee0_.skill as skill9_1_ from employee employee0_ where employee0_.deptid=2 limit ?
+2018-12-12 18:47:50 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select employee0_.id as id1_1_, employee0_.city as city2_1_, employee0_.country as country3_1_, employee0_.deptid as deptid10_1_, employee0_.desg as desg4_1_, employee0_.doj as doj5_1_, employee0_.grade as grade6_1_, employee0_.name as name7_1_, employee0_.salary as salary8_1_, employee0_.skill as skill9_1_ from employee employee0_ cross join department department1_ where employee0_.deptid=department1_.deptid and department1_.deptname=? limit ?
+2018-12-12 18:47:50 [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [grm]
+2018-12-12 18:48:26 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select employee0_.id as id1_1_, employee0_.city as city2_1_, employee0_.country as country3_1_, employee0_.deptid as deptid10_1_, employee0_.desg as desg4_1_, employee0_.doj as doj5_1_, employee0_.grade as grade6_1_, employee0_.name as name7_1_, employee0_.salary as salary8_1_, employee0_.skill as skill9_1_ from employee employee0_ cross join department department1_ where employee0_.deptid=department1_.deptid and department1_.deptname=? limit ?
+2018-12-12 18:48:26 [http-nio-8080-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [grm]
+2018-12-12 18:48:54 [http-nio-8080-exec-4] DEBUG org.hibernate.SQL - select employee0_.id as id1_1_, employee0_.city as city2_1_, employee0_.country as country3_1_, employee0_.deptid as deptid10_1_, employee0_.desg as desg4_1_, employee0_.doj as doj5_1_, employee0_.grade as grade6_1_, employee0_.name as name7_1_, employee0_.salary as salary8_1_, employee0_.skill as skill9_1_ from employee employee0_ where employee0_.name like ? limit ?
+2018-12-12 18:48:54 [http-nio-8080-exec-4] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [mike%]
+2018-12-12 18:49:23 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select department0_.deptid as deptid1_0_, department0_.deptheadid as depthead3_0_, department0_.deptname as deptname2_0_ from department department0_ limit ?
+2018-12-12 18:49:23 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select employee0_.id as id1_1_0_, employee0_.city as city2_1_0_, employee0_.country as country3_1_0_, employee0_.deptid as deptid10_1_0_, employee0_.desg as desg4_1_0_, employee0_.doj as doj5_1_0_, employee0_.grade as grade6_1_0_, employee0_.name as name7_1_0_, employee0_.salary as salary8_1_0_, employee0_.skill as skill9_1_0_, department1_.deptid as deptid1_0_1_, department1_.deptheadid as depthead3_0_1_, department1_.deptname as deptname2_0_1_, employee2_.id as id1_1_2_, employee2_.city as city2_1_2_, employee2_.country as country3_1_2_, employee2_.deptid as deptid10_1_2_, employee2_.desg as desg4_1_2_, employee2_.doj as doj5_1_2_, employee2_.grade as grade6_1_2_, employee2_.name as name7_1_2_, employee2_.salary as salary8_1_2_, employee2_.skill as skill9_1_2_ from employee employee0_ left outer join department department1_ on employee0_.deptid=department1_.deptid left outer join employee employee2_ on department1_.deptheadid=employee2_.id where employee0_.id=?
+2018-12-12 18:49:23 [http-nio-8080-exec-5] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [1]
+2018-12-12 18:49:23 [http-nio-8080-exec-5] DEBUG org.hibernate.SQL - select employee0_.id as id1_1_0_, employee0_.city as city2_1_0_, employee0_.country as country3_1_0_, employee0_.deptid as deptid10_1_0_, employee0_.desg as desg4_1_0_, employee0_.doj as doj5_1_0_, employee0_.grade as grade6_1_0_, employee0_.name as name7_1_0_, employee0_.salary as salary8_1_0_, employee0_.skill as skill9_1_0_, department1_.deptid as deptid1_0_1_, department1_.deptheadid as depthead3_0_1_, department1_.deptname as deptname2_0_1_, employee2_.id as id1_1_2_, employee2_.city as city2_1_2_, employee2_.country as country3_1_2_, employee2_.deptid as deptid10_1_2_, employee2_.desg as desg4_1_2_, employee2_.doj as doj5_1_2_, employee2_.grade as grade6_1_2_, employee2_.name as name7_1_2_, employee2_.salary as salary8_1_2_, employee2_.skill as skill9_1_2_ from employee employee0_ left outer join department department1_ on employee0_.deptid=department1_.deptid left outer join employee employee2_ on department1_.deptheadid=employee2_.id where employee0_.id=?
+2018-12-12 18:49:23 [http-nio-8080-exec-5] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [5]
+2018-12-12 18:49:43 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select employee0_.id as id1_1_, employee0_.city as city2_1_, employee0_.country as country3_1_, employee0_.deptid as deptid10_1_, employee0_.desg as desg4_1_, employee0_.doj as doj5_1_, employee0_.grade as grade6_1_, employee0_.name as name7_1_, employee0_.salary as salary8_1_, employee0_.skill as skill9_1_ from employee employee0_ where employee0_.name like ? limit ?
+2018-12-12 18:49:43 [http-nio-8080-exec-6] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [mike%]
+2018-12-12 18:50:09 [http-nio-8080-exec-8] DEBUG org.hibernate.SQL - select employee0_.id as id1_1_, employee0_.city as city2_1_, employee0_.country as country3_1_, employee0_.deptid as deptid10_1_, employee0_.desg as desg4_1_, employee0_.doj as doj5_1_, employee0_.grade as grade6_1_, employee0_.name as name7_1_, employee0_.salary as salary8_1_, employee0_.skill as skill9_1_ from employee employee0_ limit ?
+2018-12-12 18:52:08 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select employee0_.id as id1_1_0_, employee0_.city as city2_1_0_, employee0_.country as country3_1_0_, employee0_.deptid as deptid10_1_0_, employee0_.desg as desg4_1_0_, employee0_.doj as doj5_1_0_, employee0_.grade as grade6_1_0_, employee0_.name as name7_1_0_, employee0_.salary as salary8_1_0_, employee0_.skill as skill9_1_0_, department1_.deptid as deptid1_0_1_, department1_.deptheadid as depthead3_0_1_, department1_.deptname as deptname2_0_1_, employee2_.id as id1_1_2_, employee2_.city as city2_1_2_, employee2_.country as country3_1_2_, employee2_.deptid as deptid10_1_2_, employee2_.desg as desg4_1_2_, employee2_.doj as doj5_1_2_, employee2_.grade as grade6_1_2_, employee2_.name as name7_1_2_, employee2_.salary as salary8_1_2_, employee2_.skill as skill9_1_2_ from employee employee0_ left outer join department department1_ on employee0_.deptid=department1_.deptid left outer join employee employee2_ on department1_.deptheadid=employee2_.id where employee0_.id=?
+2018-12-12 18:52:08 [http-nio-8080-exec-10] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [1]
+2018-12-12 18:52:08 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - select department0_.deptid as deptid1_0_0_, department0_.deptheadid as depthead3_0_0_, department0_.deptname as deptname2_0_0_, employee1_.id as id1_1_1_, employee1_.city as city2_1_1_, employee1_.country as country3_1_1_, employee1_.deptid as deptid10_1_1_, employee1_.desg as desg4_1_1_, employee1_.doj as doj5_1_1_, employee1_.grade as grade6_1_1_, employee1_.name as name7_1_1_, employee1_.salary as salary8_1_1_, employee1_.skill as skill9_1_1_, department2_.deptid as deptid1_0_2_, department2_.deptheadid as depthead3_0_2_, department2_.deptname as deptname2_0_2_ from department department0_ left outer join employee employee1_ on department0_.deptheadid=employee1_.id left outer join department department2_ on employee1_.deptid=department2_.deptid where department0_.deptid=?
+2018-12-12 18:52:08 [http-nio-8080-exec-10] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [1]
+2018-12-12 18:52:08 [http-nio-8080-exec-10] DEBUG org.hibernate.SQL - update employee set city=?, country=?, deptid=?, desg=?, doj=?, grade=?, name=?, salary=?, skill=? where id=?
+2018-12-12 18:52:08 [http-nio-8080-exec-10] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [BANGALORE]
+2018-12-12 18:52:08 [http-nio-8080-exec-10] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [2] as [VARCHAR] - [asgard]
+2018-12-12 18:52:08 [http-nio-8080-exec-10] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [3] as [INTEGER] - [1]
+2018-12-12 18:52:08 [http-nio-8080-exec-10] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [4] as [VARCHAR] - [hammer guy]
+2018-12-12 18:52:08 [http-nio-8080-exec-10] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [5] as [DATE] - [1986-04-12]
+2018-12-12 18:52:08 [http-nio-8080-exec-10] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [6] as [INTEGER] - [10]
+2018-12-12 18:52:08 [http-nio-8080-exec-10] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [7] as [VARCHAR] - [thor]
+2018-12-12 18:52:08 [http-nio-8080-exec-10] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [8] as [FLOAT] - [83574.0]
+2018-12-12 18:52:08 [http-nio-8080-exec-10] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [9] as [VARCHAR] - [web]
+2018-12-12 18:52:08 [http-nio-8080-exec-10] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [10] as [INTEGER] - [1]
+2018-12-12 18:52:42 [http-nio-8080-exec-1] DEBUG org.hibernate.SQL - select employee0_.id as id1_1_0_, employee0_.city as city2_1_0_, employee0_.country as country3_1_0_, employee0_.deptid as deptid10_1_0_, employee0_.desg as desg4_1_0_, employee0_.doj as doj5_1_0_, employee0_.grade as grade6_1_0_, employee0_.name as name7_1_0_, employee0_.salary as salary8_1_0_, employee0_.skill as skill9_1_0_, department1_.deptid as deptid1_0_1_, department1_.deptheadid as depthead3_0_1_, department1_.deptname as deptname2_0_1_, employee2_.id as id1_1_2_, employee2_.city as city2_1_2_, employee2_.country as country3_1_2_, employee2_.deptid as deptid10_1_2_, employee2_.desg as desg4_1_2_, employee2_.doj as doj5_1_2_, employee2_.grade as grade6_1_2_, employee2_.name as name7_1_2_, employee2_.salary as salary8_1_2_, employee2_.skill as skill9_1_2_ from employee employee0_ left outer join department department1_ on employee0_.deptid=department1_.deptid left outer join employee employee2_ on department1_.deptheadid=employee2_.id where employee0_.id=?
+2018-12-12 18:52:42 [http-nio-8080-exec-1] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [1]
+2018-12-12 18:54:08 [Thread-5] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2018-12-12 18:54:08 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-12-12 18:54:08 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2018-12-12 18:54:08 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2018-12-12 18:54:09 [restartedMain] INFO  c.n.d.GenericDataRestApplication - Starting GenericDataRestApplication on Srikeshs-MacBook-Pro.local with PID 42706 (/Users/srikeshnagoji/Documents/javaworkspace/app/target/classes started by srikeshnagoji in /Users/srikeshnagoji/Documents/javaworkspace/app)
+2018-12-12 18:54:09 [restartedMain] INFO  c.n.d.GenericDataRestApplication - No active profile set, falling back to default profiles: default
+2018-12-12 18:54:10 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2018-12-12 18:54:10 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 40ms. Found 2 repository interfaces.
+2018-12-12 18:54:10 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ef85f5a7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-12-12 18:54:10 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.hateoas.config.HateoasConfiguration' of type [org.springframework.hateoas.config.HateoasConfiguration$$EnhancerBySpringCGLIB$$6f0642d9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-12-12 18:54:11 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2018-12-12 18:54:11 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2018-12-12 18:54:11 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/9.0.12
+2018-12-12 18:54:11 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2018-12-12 18:54:11 [restartedMain] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1596 ms
+2018-12-12 18:54:11 [restartedMain] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+2018-12-12 18:54:11 [restartedMain] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet webServlet mapped to [/h2-console/*]
+2018-12-12 18:54:11 [restartedMain] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-12-12 18:54:11 [restartedMain] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-12-12 18:54:11 [restartedMain] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'formContentFilter' to: [/*]
+2018-12-12 18:54:11 [restartedMain] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2018-12-12 18:54:11 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2018-12-12 18:54:11 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2018-12-12 18:54:11 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-12-12 18:54:11 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-12-12 18:54:11 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-12-12 18:54:11 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2018-12-12 18:54:12 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2018-12-12 18:54:12 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2018-12-12 18:54:12 [restartedMain] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2018-12-12 18:54:12 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2018-12-12 18:54:12 [restartedMain] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2018-12-12 18:54:12 [restartedMain] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2018-12-12 18:54:12 [restartedMain] INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: findAllByAdvPredicateUsingGET_1
+2018-12-12 18:54:12 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2018-12-12 18:54:12 [restartedMain] INFO  c.n.d.GenericDataRestApplication - Started GenericDataRestApplication in 3.249 seconds (JVM running for 648.364)
+2018-12-12 18:54:12 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2018-12-12 18:54:12 [restartedMain] ERROR c.n.d.GenericDataRestApplication - Message logged at ERROR level
+2018-12-12 18:54:12 [restartedMain] WARN  c.n.d.GenericDataRestApplication - Message logged at WARN level
+2018-12-12 18:54:12 [restartedMain] INFO  c.n.d.GenericDataRestApplication - Message logged at INFO level
+2018-12-12 18:54:22 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2018-12-12 18:54:22 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2018-12-12 18:54:22 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 7 ms
+2018-12-12 18:54:22 [http-nio-8080-exec-2] DEBUG org.hibernate.SQL - select employee0_.id as id1_1_0_, employee0_.city as city2_1_0_, employee0_.country as country3_1_0_, employee0_.deptid as deptid10_1_0_, employee0_.desg as desg4_1_0_, employee0_.doj as doj5_1_0_, employee0_.grade as grade6_1_0_, employee0_.name as name7_1_0_, employee0_.salary as salary8_1_0_, employee0_.skill as skill9_1_0_, department1_.deptid as deptid1_0_1_, department1_.deptheadid as depthead3_0_1_, department1_.deptname as deptname2_0_1_, employee2_.id as id1_1_2_, employee2_.city as city2_1_2_, employee2_.country as country3_1_2_, employee2_.deptid as deptid10_1_2_, employee2_.desg as desg4_1_2_, employee2_.doj as doj5_1_2_, employee2_.grade as grade6_1_2_, employee2_.name as name7_1_2_, employee2_.salary as salary8_1_2_, employee2_.skill as skill9_1_2_ from employee employee0_ left outer join department department1_ on employee0_.deptid=department1_.deptid left outer join employee employee2_ on department1_.deptheadid=employee2_.id where employee0_.id=?
+2018-12-12 18:54:22 [http-nio-8080-exec-2] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [1]
+2018-12-12 18:54:53 [http-nio-8080-exec-3] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2018-12-12 18:54:53 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select employee0_.id as id1_1_, employee0_.city as city2_1_, employee0_.country as country3_1_, employee0_.deptid as deptid10_1_, employee0_.desg as desg4_1_, employee0_.doj as doj5_1_, employee0_.grade as grade6_1_, employee0_.name as name7_1_, employee0_.salary as salary8_1_, employee0_.skill as skill9_1_ from employee employee0_ limit ?
+2018-12-12 18:54:53 [http-nio-8080-exec-3] DEBUG org.hibernate.SQL - select department0_.deptid as deptid1_0_0_, department0_.deptheadid as depthead3_0_0_, department0_.deptname as deptname2_0_0_, employee1_.id as id1_1_1_, employee1_.city as city2_1_1_, employee1_.country as country3_1_1_, employee1_.deptid as deptid10_1_1_, employee1_.desg as desg4_1_1_, employee1_.doj as doj5_1_1_, employee1_.grade as grade6_1_1_, employee1_.name as name7_1_1_, employee1_.salary as salary8_1_1_, employee1_.skill as skill9_1_1_, department2_.deptid as deptid1_0_2_, department2_.deptheadid as depthead3_0_2_, department2_.deptname as deptname2_0_2_ from department department0_ left outer join employee employee1_ on department0_.deptheadid=employee1_.id left outer join department department2_ on employee1_.deptid=department2_.deptid where department0_.deptid=?
+2018-12-12 18:54:53 [http-nio-8080-exec-3] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [1]
+2018-12-12 18:56:38 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select employee0_.id as id1_1_, employee0_.city as city2_1_, employee0_.country as country3_1_, employee0_.deptid as deptid10_1_, employee0_.desg as desg4_1_, employee0_.doj as doj5_1_, employee0_.grade as grade6_1_, employee0_.name as name7_1_, employee0_.salary as salary8_1_, employee0_.skill as skill9_1_ from employee employee0_ cross join department department1_ where employee0_.deptid=department1_.deptid and department1_.deptname=? limit ?
+2018-12-12 18:56:38 [http-nio-8080-exec-6] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [VARCHAR] - [grm]
+2018-12-12 18:56:38 [http-nio-8080-exec-6] DEBUG org.hibernate.SQL - select department0_.deptid as deptid1_0_0_, department0_.deptheadid as depthead3_0_0_, department0_.deptname as deptname2_0_0_, employee1_.id as id1_1_1_, employee1_.city as city2_1_1_, employee1_.country as country3_1_1_, employee1_.deptid as deptid10_1_1_, employee1_.desg as desg4_1_1_, employee1_.doj as doj5_1_1_, employee1_.grade as grade6_1_1_, employee1_.name as name7_1_1_, employee1_.salary as salary8_1_1_, employee1_.skill as skill9_1_1_, department2_.deptid as deptid1_0_2_, department2_.deptheadid as depthead3_0_2_, department2_.deptname as deptname2_0_2_ from department department0_ left outer join employee employee1_ on department0_.deptheadid=employee1_.id left outer join department department2_ on employee1_.deptid=department2_.deptid where department0_.deptid=?
+2018-12-12 18:56:38 [http-nio-8080-exec-6] TRACE o.h.type.descriptor.sql.BasicBinder - binding parameter [1] as [INTEGER] - [1]
+2018-12-12 18:57:15 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2018-12-12 18:57:15 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2018-12-12 18:57:15 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-12-12 18:57:15 [RMI TCP Connection(2)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2018-12-12 18:57:15 [RMI TCP Connection(2)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
