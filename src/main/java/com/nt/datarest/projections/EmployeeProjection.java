@@ -13,11 +13,11 @@ import com.nt.datarest.model.Employee;
 
 @Projection(name = "inlineRecords2", types = { Employee.class }) //FOR EMPLOYEE
 public interface EmployeeProjection {
-	int getEmpid();
-	String getEmpname();
+	int getId();
+	String getName();
 	
 //	Department getDeptid();
-	DepartmentProjection getDeptid();
+	DepartmentProjection getDept();
 	
 	
 	String getSkill();
@@ -26,5 +26,5 @@ public interface EmployeeProjection {
 	String getCity();
 	String getCountry();
 	Date getDoj();
-	String getDesignation();
+	String getDesg();
 }

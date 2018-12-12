@@ -25,7 +25,7 @@ import com.fasterxml.jackson.annotation.JsonUnwrapped;
 @Entity
 @Table(name="employee")
 
-@JsonPropertyOrder({ "empid", "empname","skill","salary","grade","city","country","doj","designation" })
+@JsonPropertyOrder({ "id", "name","skill","salary","grade","city","country","doj","desg" })
 public class Employee implements Serializable{
 	
 	
@@ -55,7 +55,7 @@ public class Employee implements Serializable{
 	private String desg;//total 10 attributes
 	
 	
-	/////deptid setter and getter
+	/////dept setter and getter
 	public Department getDeptid() {
 		return dept;
 	}
