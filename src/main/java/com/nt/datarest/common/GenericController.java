@@ -37,7 +37,7 @@ public abstract class GenericController<T, ID extends Serializable> {
     }
 
     
-    protected Specification<T> resolveSpecificationFromInfixExpr(String searchParameters) {
+    protected Specification<T> resolveSpecificationFromInfixExpr(String searchParameters) throws BadRequestException {
         CriteriaParser parser = new CriteriaParser();
         GenericSpecificationsBuilder<T> specBuilder = new GenericSpecificationsBuilder<>();
         return specBuilder.build(parser.parse(searchParameters), BaseGenericSpecification::new);

@@ -50,9 +50,15 @@ public class EmployeeController extends GenericController<Employee,Integer>{
     
     @GetMapping(value = "/employees/search/byadvsearch",produces = "application/json")//remove "produces" key
     @ResponseBody
-    public ResponseEntity<?> findAllByAdvPredicate(@RequestParam(value = "advsearch") String search,Pageable pageable){
-        Specification<Employee> spec = resolveSpecificationFromInfixExpr(search);
-        Page<Employee> emplo= emplrepo.findAll(spec, pageable);
+    public ResponseEntity<?> findAllByAdvPredicate(@RequestParam(value = "advsearch") String search,Pageable pageable) throws BadRequestException{
+    	Page<Employee> emplo;
+    	if(search!=null && !search.isEmpty()) {
+    	Specification<Employee> spec = resolveSpecificationFromInfixExpr(search);
+        emplo= emplrepo.findAll(spec, pageable);
+    	}
+    	else {
+    		emplo= emplrepo.findAll(pageable);
+    	}
         Page<EmployeeProjection> projected = emplo.map(l -> factory.createProjection(EmployeeProjection.class, l));
         PagedResources<Resource<EmployeeProjection>> resources = assembler.toResource(projected);
         return ResponseEntity.ok(resources);

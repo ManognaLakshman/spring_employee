@@ -9,6 +9,8 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import org.springframework.data.jpa.domain.Specification;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ResponseStatus;
 
 public class GenericSpecificationsBuilder<U> {
 
@@ -67,7 +69,7 @@ public class GenericSpecificationsBuilder<U> {
         return result;
     }
 
-    public Specification<U> build(Deque<?> postFixedExprStack, Function<SpecSearchCriteria, Specification<U>> converter) {
+    public Specification<U> build(Deque<?> postFixedExprStack, Function<SpecSearchCriteria, Specification<U>> converter) throws BadRequestException {
 
         Deque<Specification<U>> specStack = new LinkedList<>();
 
@@ -90,7 +92,13 @@ public class GenericSpecificationsBuilder<U> {
             }
 
         }
-        return specStack.pop();
+//        return specStack.pop();
+        //
+       if(specStack.isEmpty())
+    	   throw new BadRequestException();
+       
+       return specStack.pop();
+        //
 
     }
 

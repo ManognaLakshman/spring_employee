@@ -66,13 +66,20 @@ public class DepartmentController extends GenericController<Department,Integer>{
     
     @GetMapping(value = "/departments/search/byadvsearch",produces = "application/json")//remove "produces" key
     @ResponseBody
-    public ResponseEntity<?> findAllByAdvPredicate(@RequestParam(value = "advsearch") String search,Pageable pageable){
-        Specification<Department> spec = resolveSpecificationFromInfixExpr(search);
-        Page<Department> emplo= deptrepo.findAll(spec, pageable);
+    public ResponseEntity<?> findAllByAdvPredicate(@RequestParam(value = "advsearch") String search,Pageable pageable) throws BadRequestException{
+    	Page<Department> emplo;
+    	if(search!=null && !search.isEmpty()) {
+    	Specification<Department> spec = resolveSpecificationFromInfixExpr(search);
+    	emplo = deptrepo.findAll(spec, pageable);
+        }
+        else {
+        emplo= deptrepo.findAll(pageable);
+        }
+        
         Page<DepartmentProjection> projected = emplo.map(l -> factory.createProjection(DepartmentProjection.class, l));
         PagedResources<Resource<DepartmentProjection>> resources = assembler.toResource(projected);
         return ResponseEntity.ok(resources);
-       
+       	
 	}
     
     
